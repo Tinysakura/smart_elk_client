@@ -4,6 +4,7 @@ import com.tinysakura.bean.base.Acknowledged;
 import com.tinysakura.net.retrofit.service.IndexService;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 import org.junit.Test;
 
 import java.util.List;
@@ -19,13 +20,12 @@ public class RetrofitServiceHolderTest {
     public void retrofitServiceHolderTest() {
         List<Object> indexServices = RetrofitServiceHolder.getInstance().getIndexService();
 
-        System.out.println(createIndex(indexServices, "elements", 0, new Acknowledged[1]).isAcknowledged());
+        System.out.println(createIndex(indexServices, "monkey", 0, new Acknowledged[1]).isAcknowledged());
     }
 
 
-
     private Acknowledged createIndex(final List<Object> indexServices, final String indexName, final int node, final Acknowledged[] result) {
-        ((IndexService) indexServices.get(node)).createIndex(indexName).subscribe(new Observer<Acknowledged>() {
+        ((IndexService) indexServices.get(node)).createIndex(indexName).subscribeOn(Schedulers.io()).subscribe(new Observer<Acknowledged>() {
             public void onSubscribe(Disposable disposable) {
 
             }
