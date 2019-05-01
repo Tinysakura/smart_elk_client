@@ -34,7 +34,7 @@ public class MultiNodeInvocationHandler<T> implements InvocationHandler {
     }
 
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        return recurse(retrofitServices, method, args, 0, new Object[]{});
+        return recurse(retrofitServices, method, args, 0, new Object[1]);
     }
 
     /**
@@ -53,7 +53,7 @@ public class MultiNodeInvocationHandler<T> implements InvocationHandler {
         }
     }
 
-    private Object recurse(final List<Object> retrofitServices, final Method method, final Object[] args, final int node, final Object[] result) {
+    private Observable<Object> recurse(final List<Object> retrofitServices, final Method method, final Object[] args, final int node, final Object[] result) {
         try {
             ((Observable)method.invoke(retrofitServices.get(node), args)).subscribe(new Observer() {
                 public void onSubscribe(Disposable disposable) {
@@ -64,6 +64,7 @@ public class MultiNodeInvocationHandler<T> implements InvocationHandler {
                     /**
                      * 保存响应结果
                      */
+                    log.info("请求成功被node{}节点响应", node);
                     result[0] = o;
                 }
 
@@ -88,6 +89,13 @@ public class MultiNodeInvocationHandler<T> implements InvocationHandler {
             e.printStackTrace();
         }
 
-        return result[0];
+        if (result[0] != null) {
+            return Observable.just(result[0]);
+        } else {
+            /**
+             * 当建立重复的索引时会走入该分支
+             */
+            return Observable.empty();
+        }
     }
 }
