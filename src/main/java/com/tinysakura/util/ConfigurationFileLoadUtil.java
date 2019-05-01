@@ -23,7 +23,7 @@ public class ConfigurationFileLoadUtil {
         HashMap loadMap = null;
 
         try {
-            loadMap = Yaml.loadType(ConfigurationFileLoadUtil.class.getClassLoader().getResourceAsStream("/resource/".concat(fileName)), HashMap.class);
+            loadMap = Yaml.loadType(ConfigurationFileLoadUtil.class.getClassLoader().getResourceAsStream(fileName), HashMap.class);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -39,7 +39,7 @@ public class ConfigurationFileLoadUtil {
         Properties properties = new Properties();
 
         try {
-            properties.load(ConfigurationFileLoadUtil.class.getClassLoader().getResourceAsStream("/resource/application.properties"));
+            properties.load(ConfigurationFileLoadUtil.class.getClassLoader().getResourceAsStream("application.properties"));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,10 +1,10 @@
 package com.tinysakura.net.client;
 
+import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import com.tinysakura.net.retrofit.service.IndexService;
 import com.tinysakura.net.retrofit.service.QueryService;
 import com.tinysakura.util.ConfigurationFileLoadUtil;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.io.File;
@@ -40,7 +40,9 @@ public class RetrofitServiceHolder {
     private RetrofitServiceHolder() {
         serviceMap = new HashMap<String, List<Object>>(16);
         serviceMap.put(INDEX_SERVICE, new ArrayList<Object>());
-        serviceMap.put(ELK_NODE_IP_CONFIG, new ArrayList<Object>());
+        serviceMap.put(QUERY_SERVICE, new ArrayList<Object>());
+
+        elkClients = new ArrayList<Retrofit>();
 
         initRetrofitClient();
         initServices();
@@ -70,7 +72,7 @@ public class RetrofitServiceHolder {
         /**
          * 从classpath下的resource目录下读取application.yml（application.properties）
          */
-        String resourcePath = this.getClass().getClassLoader().getResource("/resource").toString();
+        String resourcePath = this.getClass().getClassLoader().getResource("").toString();
 
         if (new File(resourcePath.concat("/application.yaml")).exists()) {
             hashMap = ConfigurationFileLoadUtil.loadApplicationConfiguration4Yaml("application.yaml");
@@ -91,7 +93,7 @@ public class RetrofitServiceHolder {
         for (String ip : elkNodeIps) {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(ip)
-                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
 
