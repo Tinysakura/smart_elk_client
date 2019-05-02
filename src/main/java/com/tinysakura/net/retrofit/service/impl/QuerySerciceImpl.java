@@ -7,5 +7,5 @@ import com.tinysakura.net.retrofit.service.QueryService;
  * @Date: 2019/5/1
  */
 
-public abstract class QuerySerciceImpl implements QueryService {
+public class QuerySerciceImpl implements QueryService {
 }
