@@ -1,6 +1,9 @@
 package com.tinysakura.bean.index;
 
+import com.tinysakura.bean.document.DocumentType;
 import lombok.Data;
+
+import java.util.Map;
 
 /**
  * 索引操作相关请求体
@@ -9,6 +12,6 @@ import lombok.Data;
  */
 @Data
 public class Index {
-    private Mapping mapping;
+    private Map<String, DocumentType> mapping;
     private Setting setting;
 }

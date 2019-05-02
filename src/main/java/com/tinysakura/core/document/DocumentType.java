@@ -23,7 +23,7 @@ public class DocumentType {
 
         public Builder() {
             this.documentType = new com.tinysakura.bean.document.DocumentType();
-            documentType.setPropertiesMap(new HashMap<String, Properties>(16));
+            documentType.setProperties(new HashMap<String, Properties>(16));
         }
 
         /**
@@ -39,12 +39,11 @@ public class DocumentType {
 
         /**
          * 文档字段映射
-         * @param propertiesName
          * @param properties
          * @return
          */
-        public Builder Properties(String propertiesName, Properties properties) {
-            documentType.getPropertiesMap().put(propertiesName, properties);
+        public Builder properties(com.tinysakura.core.document.Properties properties) {
+            documentType.getProperties().put(properties.getPropertiesName(), properties.getProperties());
 
             return this;
         }

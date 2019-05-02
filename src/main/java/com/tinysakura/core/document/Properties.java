@@ -252,5 +252,13 @@ public class Properties {
 
             return this;
         }
+
+        public Properties build() {
+            Properties properties = new Properties();
+            properties.setPropertiesName(this.propertiesName);
+            properties.setProperties(this.properties);
+
+            return properties;
+        }
     }
 }

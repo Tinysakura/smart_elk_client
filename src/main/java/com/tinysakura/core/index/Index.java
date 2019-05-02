@@ -6,6 +6,7 @@ import com.tinysakura.bean.index.Setting;
 import lombok.Data;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 索引建造类
@@ -80,15 +81,14 @@ public class Index {
          * @param documentType
          * @return
          */
-        public Builder mapping(String documentMappingName, DocumentType documentType) {
+        public Builder mapping(com.tinysakura.core.document.DocumentType documentType) {
             if (index.getMapping() == null) {
-                Mapping mapping = new Mapping();
-                mapping.setDocumentTypeMap(new HashMap<String, DocumentType>(16));
+                Map<String, DocumentType> mapping = new HashMap<String, DocumentType>(16);
 
                 index.setMapping(mapping);
             }
 
-            index.getMapping().getDocumentTypeMap().put(documentMappingName, documentType);
+            index.getMapping().put(documentType.getDocumentMappingName(), documentType.getDocumentType());
 
             return this;
         }
