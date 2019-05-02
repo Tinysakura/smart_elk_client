@@ -1,6 +1,6 @@
 package com.tinysakura.core.index;
 
-import com.tinysakura.bean.document.Properties;
+import com.tinysakura.bean.document.DocumentType;
 import com.tinysakura.bean.index.Setting;
 import lombok.Data;
 
@@ -82,11 +82,12 @@ public class Index {
          */
         public Builder mapping(com.tinysakura.core.document.DocumentType documentType) {
             if (index.getMappings() == null) {
-                HashMap<String, Map<String, Map<String, Object>>> mappings = new HashMap<String, Map<String, Map<String, Object>>>(16);
-                index.setMappings(mappings);
+                Map<String, DocumentType> mapping = new HashMap<String, DocumentType>(16);
+
+                index.setMappings(mapping);
             }
 
-            index.getMappings().put(documentType.getDocumentMappingName(), documentType.getDocumentType().getPropertiesMap());
+            index.getMappings().put(documentType.getDocumentMappingName(), documentType.getDocumentType());
 
             return this;
         }

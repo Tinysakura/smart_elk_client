@@ -2,7 +2,6 @@ package com.tinysakura.bean.document;
 
 import lombok.Data;
 
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -12,5 +11,10 @@ import java.util.Map;
  */
 @Data
 public class DocumentType {
-    private HashMap<String, Map<String, Object>> propertiesMap;
+    private Map<String, Map<String, Object>> properties;
+
+    /**
+     * 是否打开自动类型猜测
+     */
+    private boolean dynamic;
 }

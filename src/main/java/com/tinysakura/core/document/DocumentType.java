@@ -1,6 +1,5 @@
 package com.tinysakura.core.document;
 
-import com.tinysakura.bean.document.Properties;
 import lombok.Data;
 
 import java.util.HashMap;
@@ -24,7 +23,11 @@ public class DocumentType {
 
         public Builder() {
             this.documentType = new com.tinysakura.bean.document.DocumentType();
-            documentType.setPropertiesMap(new HashMap<String, Map<String, Object>>());
+            documentType.setProperties(new HashMap<String, Map<String, Object>>(16));
+            /**
+             * 默认开启自动类型猜测
+             */
+            documentType.setDynamic(true);
         }
 
         /**
@@ -38,13 +41,19 @@ public class DocumentType {
             return this;
         }
 
+        public Builder dynamic(boolean dynamic) {
+            this.documentType.setDynamic(dynamic);
+
+            return this;
+        }
+
         /**
          * 文档字段映射
          * @param properties
          * @return
          */
         public Builder properties(com.tinysakura.core.document.Properties properties) {
-            documentType.getPropertiesMap().put(properties.getPropertiesName(), properties.getProperties());
+            documentType.getProperties().put(properties.getPropertiesName(), properties.getProperties());
 
             return this;
         }
