@@ -1,11 +1,11 @@
 package com.tinysakura.core.index;
 
-import com.tinysakura.bean.document.DocumentType;
-import com.tinysakura.bean.index.Mapping;
+import com.tinysakura.bean.document.Properties;
 import com.tinysakura.bean.index.Setting;
 import lombok.Data;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 索引建造类
@@ -50,11 +50,11 @@ public class Index {
          * @return
          */
         public Builder shardsNumber(Integer numberOfShards) {
-            if (index.getSetting() == null) {
-                index.setSetting(new Setting());
+            if (index.getSettings() == null) {
+                index.setSettings(new Setting());
             }
 
-            index.getSetting().setNumber_of_shards(numberOfShards);
+            index.getSettings().setNumber_of_shards(numberOfShards);
 
             return this;
         }
@@ -66,11 +66,11 @@ public class Index {
          * @return
          */
         public Builder replicasNumber(Integer numberOfReplicas) {
-            if (index.getSetting() == null) {
-                index.setSetting(new Setting());
+            if (index.getSettings() == null) {
+                index.setSettings(new Setting());
             }
 
-            index.getSetting().setNumber_of_replicas(numberOfReplicas);
+            index.getSettings().setNumber_of_replicas(numberOfReplicas);
 
             return this;
         }
@@ -80,15 +80,13 @@ public class Index {
          * @param documentType
          * @return
          */
-        public Builder mapping(String documentMappingName, DocumentType documentType) {
-            if (index.getMapping() == null) {
-                Mapping mapping = new Mapping();
-                mapping.setDocumentTypeMap(new HashMap<String, DocumentType>(16));
-
-                index.setMapping(mapping);
+        public Builder mapping(com.tinysakura.core.document.DocumentType documentType) {
+            if (index.getMappings() == null) {
+                HashMap<String, Map<String, Map<String, Object>>> mappings = new HashMap<String, Map<String, Map<String, Object>>>(16);
+                index.setMappings(mappings);
             }
 
-            index.getMapping().getDocumentTypeMap().put(documentMappingName, documentType);
+            index.getMappings().put(documentType.getDocumentMappingName(), documentType.getDocumentType().getPropertiesMap());
 
             return this;
         }

@@ -1,6 +1,10 @@
 package com.tinysakura.bean.index;
 
+import com.tinysakura.bean.document.Properties;
 import lombok.Data;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 索引操作相关请求体
@@ -9,6 +13,6 @@ import lombok.Data;
  */
 @Data
 public class Index {
-    private Mapping mapping;
-    private Setting setting;
+    private HashMap<String, Map<String, Map<String, Object>>> mappings;
+    private Setting settings;
 }

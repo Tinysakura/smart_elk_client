@@ -28,7 +28,7 @@ public class RetrofitProxyServiceHolder {
         initQueryServiceProxy();
     }
 
-    public RetrofitProxyServiceHolder getInstance() {
+    public static RetrofitProxyServiceHolder getInstance() {
         if (retrofitProxyServiceHolder == null) {
             synchronized (RetrofitProxyServiceHolder.class) {
                 if (retrofitProxyServiceHolder == null) {

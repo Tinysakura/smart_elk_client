@@ -2,6 +2,7 @@ package com.tinysakura.bean.document;
 
 import lombok.Data;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -11,5 +12,5 @@ import java.util.Map;
  */
 @Data
 public class DocumentType {
-    private Map<String, Properties> propertiesMap;
+    private HashMap<String, Map<String, Object>> propertiesMap;
 }

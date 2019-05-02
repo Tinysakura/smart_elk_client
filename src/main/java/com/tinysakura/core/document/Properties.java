@@ -4,6 +4,7 @@ import com.tinysakura.constant.DocumentPropertiesConstant;
 import lombok.Data;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 映射字段配置构造类
@@ -14,15 +15,17 @@ import java.util.HashMap;
 public class Properties {
     private String propertiesName;
 
-    private com.tinysakura.bean.document.Properties properties;
+    // private com.tinysakura.bean.document.Properties properties;
+
+    private Map<String, Object> properties;
 
     public static final class Builder {
         private String propertiesName;
 
-        private com.tinysakura.bean.document.Properties properties;
+        private Map<String, Object> properties;
 
         public Builder() {
-            this.properties = new com.tinysakura.bean.document.Properties();
+            properties = new HashMap<String, Object>();
         }
 
         public Builder name(String propertiesName) {
@@ -32,8 +35,7 @@ public class Properties {
         }
 
         public Builder type(String type) {
-            this.properties.setType(type);
-
+            properties.put("type", type);
             return this;
         }
 
@@ -44,9 +46,9 @@ public class Properties {
          */
         public Builder storeOriginal2Index(boolean store) {
             if (store) {
-                this.properties.setStore(DocumentPropertiesConstant.Store.YES);
+                properties.put("store", DocumentPropertiesConstant.Store.YES);
             } else {
-                this.properties.setStore(DocumentPropertiesConstant.Store.NO);
+                properties.put("store", DocumentPropertiesConstant.Store.NO);
             }
 
             return this;
@@ -59,9 +61,9 @@ public class Properties {
          */
         public Builder write2Index(boolean index) {
             if (index) {
-                this.properties.setIndex(DocumentPropertiesConstant.Index.ANALYZED);
+                properties.put("index", DocumentPropertiesConstant.Index.ANALYZED);
             } else {
-                this.properties.setIndex(DocumentPropertiesConstant.Index.NOT_ANALYZED);
+                properties.put("index", DocumentPropertiesConstant.Index.NOT_ANALYZED);
             }
 
             return this;
@@ -73,13 +75,13 @@ public class Properties {
          * @return
          */
         public Builder indexName(String indexName) {
-            this.properties.setIndex_name(indexName);
+            properties.put("index_name", indexName);
 
             return this;
         }
 
         public Builder boost(Double boost) {
-            this.properties.setBoost(boost);
+            properties.put("boost", boost);
 
             return this;
         }
@@ -92,9 +94,9 @@ public class Properties {
          */
         public Builder termVector(String termVector) {
             String type;
-            if ((type = this.properties.getType()) != null) {
+            if ((type = (String) this.properties.get("type")) != null) {
                 if (type.equals(DocumentPropertiesConstant.Type.TEXT)) {
-                    this.properties.setTerm_vector(termVector);
+                    this.properties.put("term_vector", termVector);
                 }
             }
 
@@ -109,9 +111,9 @@ public class Properties {
          */
         public Builder openOmitNorms(boolean omitNorms) {
             String type;
-            if ((type = this.properties.getType()) != null) {
+            if ((type = (String) this.properties.get("type")) != null) {
                 if (type.equals(DocumentPropertiesConstant.Type.TEXT)) {
-                    this.properties.setOmit_norms(omitNorms);
+                    this.properties.put("omit_norms", omitNorms);
                 }
             }
 
@@ -126,9 +128,9 @@ public class Properties {
          */
         public Builder analyzer(String analyzer) {
             String type;
-            if ((type = this.properties.getType()) != null) {
+            if ((type = (String) this.properties.get("type")) != null) {
                 if (type.equals(DocumentPropertiesConstant.Type.TEXT)) {
-                    this.properties.setAnalyzer(analyzer);
+                    this.properties.put("analyzer", analyzer);
                 }
             }
 
@@ -143,9 +145,9 @@ public class Properties {
          */
         public Builder indexAnalyzer(String analyzer) {
             String type;
-            if ((type = this.properties.getType()) != null) {
+            if ((type = (String) this.properties.get("type")) != null) {
                 if (type.equals(DocumentPropertiesConstant.Type.TEXT)) {
-                    this.properties.setIndex_analyzer(analyzer);
+                    this.properties.put("index_analyzer", analyzer);
                 }
             }
 
@@ -160,9 +162,9 @@ public class Properties {
          */
         public Builder searchAnalyzer(String analyzer) {
             String type;
-            if ((type = this.properties.getType()) != null) {
+            if ((type = (String) this.properties.get("type")) != null) {
                 if (type.equals(DocumentPropertiesConstant.Type.TEXT)) {
-                    this.properties.setSerach_analyzer(analyzer);
+                    this.properties.put("search_analyzer", analyzer);
                 }
             }
 
@@ -177,9 +179,9 @@ public class Properties {
          */
         public Builder propertiesLengthLimit(Long limit) {
             String type;
-            if ((type = this.properties.getType()) != null) {
+            if ((type = (String) this.properties.get("type")) != null) {
                 if (type.equals(DocumentPropertiesConstant.Type.TEXT)) {
-                    this.properties.setIgnore_above(limit);
+                    this.properties.put("ignore_above", limit);
                 }
             }
 
@@ -194,9 +196,9 @@ public class Properties {
          */
         public Builder precisionStep(Integer precisionStep) {
             String type;
-            if ((type = this.properties.getType()) != null) {
+            if ((type = (String) this.properties.get("type")) != null) {
                 if (type.equals(DocumentPropertiesConstant.Type.NUMBER) || type.equals(DocumentPropertiesConstant.Type.DATE)) {
-                    this.properties.setPrecision_step(precisionStep);
+                    this.properties.put("precision_step", precisionStep);
                 }
             }
 
@@ -211,9 +213,9 @@ public class Properties {
          */
         public Builder ignoreMalformed(boolean ignoreMalformed) {
             String type;
-            if ((type = this.properties.getType()) != null) {
+            if ((type = (String) this.properties.get("type")) != null) {
                 if (type.equals(DocumentPropertiesConstant.Type.NUMBER) || type.equals(DocumentPropertiesConstant.Type.DATE)) {
-                    this.properties.setIgnore_malformed(ignoreMalformed);
+                    this.properties.put("ignore_malformed", ignoreMalformed);
                 }
             }
 
@@ -228,9 +230,9 @@ public class Properties {
          */
         public Builder format(String format) {
             String type;
-            if ((type = this.properties.getType()) != null) {
+            if ((type = (String) this.properties.get("type")) != null) {
                 if (type.equals(DocumentPropertiesConstant.Type.DATE)) {
-                    this.properties.setFormat(format);
+                    this.properties.put("format", format);
                 }
             }
 
@@ -240,17 +242,25 @@ public class Properties {
         /**
          * 多字段
          * @param fieldsName
-         * @param properties
+         * @param fields
          * @return
          */
-        public Builder fields(String fieldsName, com.tinysakura.bean.document.Properties properties) {
-            if (this.properties.getFields() == null) {
-                this.properties.setFields(new HashMap<String, com.tinysakura.bean.document.Properties>(16));
+        public Builder fields(String fieldsName, Map<String, Object> fields) {
+            if (this.properties.get("fields") == null) {
+                this.properties.put("fields", new HashMap<String, Object>(16));
             }
 
-            this.properties.getFields().put(fieldsName, properties);
+            ((Map) this.properties.get("fields")).put(fieldsName, fields);
 
             return this;
+        }
+
+        public Properties build() {
+            Properties properties = new Properties();
+            properties.setPropertiesName(this.propertiesName);
+            properties.setProperties(this.properties);
+
+            return properties;
         }
     }
 }
