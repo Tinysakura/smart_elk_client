@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5679a8ea-d449-4926-97e1-1e07bb644f6e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/document/DocumentType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/document/DocumentType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tinysakura/core/document/Properties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/core/document/Properties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Index.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tinysakura/core/document/DocumentType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/core/document/DocumentType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tinysakura/core/index/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/core/index/Index.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tinysakura/net/client/RetrofitProxyServiceHolderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tinysakura/net/client/RetrofitProxyServiceHolderTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,14 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Index.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Index.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Index.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
+            <state relative-caret-position="312">
               <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -39,8 +39,8 @@
       <file leaf-file-name="RetrofitProxyServiceHolderTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/tinysakura/net/client/RetrofitProxyServiceHolderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+            <state relative-caret-position="696">
+              <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,8 +63,8 @@
       <file leaf-file-name="DocumentType.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/core/document/DocumentType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1152">
-              <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+            <state relative-caret-position="116">
+              <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DocumentType.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DocumentType.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/document/DocumentType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+            <state relative-caret-position="336">
+              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -105,10 +105,13 @@
       <file leaf-file-name="Index.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/core/index/Index.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+            <state relative-caret-position="646">
+              <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#639#640#0" expanded="true" />
+                <element signature="e#708#709#0" expanded="true" />
+                <element signature="e#1990#2012#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -185,12 +188,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/document/Properties.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/constant/DocumentPropertiesConstant.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/net/client/RetrofitProxyServiceHolder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/core/document/Properties.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/core/index/Index.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/document/DocumentType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/core/document/DocumentType.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/tinysakura/net/client/RetrofitProxyServiceHolderTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Index.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/core/index/Index.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/core/document/Properties.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/document/DocumentType.java" />
       </list>
     </option>
   </component>
@@ -633,15 +636,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RetrofitServiceHolderTest_retrofitServiceHolderTest - 2019.05.01 at 19h 44m 23s.xml">
-      <configuration name="RetrofitServiceHolderTest.retrofitServiceHolderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MultiNodeInvocationHandlerTest_multiNodeInvocationHandlerTest - 2019.05.01 at 20h 18m 47s.xml">
-      <configuration name="MultiNodeInvocationHandlerTest.multiNodeInvocationHandlerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MultiNodeInvocationHandlerTest_multiNodeInvocationHandlerTest - 2019.05.01 at 20h 19m 22s.xml">
-      <configuration name="MultiNodeInvocationHandlerTest.multiNodeInvocationHandlerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MultiNodeInvocationHandlerTest_multiNodeInvocationHandlerTest - 2019.05.01 at 20h 21m 07s.xml">
       <configuration name="MultiNodeInvocationHandlerTest.multiNodeInvocationHandlerTest" configurationId="JUnit" />
     </history-entry>
@@ -663,9 +657,18 @@
     <history-entry file="RetrofitProxyServiceHolderTest_RetrofitProxyServiceHolderTest - 2019.05.02 at 15h 24m 05s.xml">
       <configuration name="RetrofitProxyServiceHolderTest.RetrofitProxyServiceHolderTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RetrofitProxyServiceHolderTest_RetrofitProxyServiceHolderTest - 2019.05.02 at 15h 33m 03s.xml">
+      <configuration name="RetrofitProxyServiceHolderTest.RetrofitProxyServiceHolderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RetrofitProxyServiceHolderTest_RetrofitProxyServiceHolderTest - 2019.05.02 at 15h 33m 52s.xml">
+      <configuration name="RetrofitProxyServiceHolderTest.RetrofitProxyServiceHolderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RetrofitProxyServiceHolderTest_RetrofitProxyServiceHolderTest - 2019.05.02 at 15h 45m 05s.xml">
+      <configuration name="RetrofitProxyServiceHolderTest.RetrofitProxyServiceHolderTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30589000" />
+    <option name="totallyTimeSpent" value="31212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1058,16 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/core/document/DocumentType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/core/document/Properties.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6192">
@@ -1085,26 +1078,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tinysakura/net/client/RetrofitProxyServiceHolderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Index.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Mapping.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1114,18 +1087,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/core/index/Index.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+        <state relative-caret-position="646">
+          <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#639#640#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
+            <element signature="e#1990#2012#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/document/DocumentType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        <state relative-caret-position="336">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/core/document/DocumentType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tinysakura/net/client/RetrofitProxyServiceHolderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Index.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
         </state>
       </provider>
     </entry>

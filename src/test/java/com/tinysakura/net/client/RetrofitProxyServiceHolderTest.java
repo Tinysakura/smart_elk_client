@@ -25,14 +25,14 @@ public class RetrofitProxyServiceHolderTest {
         Properties properties1 = new Properties.Builder().name("author").type(DocumentPropertiesConstant.Type.TEXT).storeOriginal2Index(true).build();
         Properties properties2 = new Properties.Builder().name("title").type(DocumentPropertiesConstant.Type.TEXT).storeOriginal2Index(true).build();
 
-        DocumentType music = new DocumentType.Builder().name("music").properties(properties1).properties(properties2).build();
+        DocumentType music = new DocumentType.Builder().name("music").dynamic(false).properties(properties1).properties(properties2).build();
 
-        Index media = new Index.Builder().indexName("media").shardsNumber(4).replicasNumber(1)
+        Index media = new Index.Builder().indexName("art").shardsNumber(4).replicasNumber(1)
                 .mapping(music).build();
 
         Gson gson = new Gson();
         System.out.println(gson.toJson(media.getIndex()));
 
-        // indexService.createIndex(media.getIndexName(), media.getIndex());
+        indexService.createIndex(media.getIndexName(), media.getIndex());
     }
 }

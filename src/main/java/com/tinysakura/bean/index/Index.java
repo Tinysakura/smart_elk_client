@@ -12,6 +12,6 @@ import java.util.Map;
  */
 @Data
 public class Index {
-    private Map<String, DocumentType> mapping;
-    private Setting setting;
+    private Map<String, DocumentType> mappings;
+    private Setting settings;
 }

@@ -12,4 +12,9 @@ import java.util.Map;
 @Data
 public class DocumentType {
     private Map<String, Map<String, Object>> properties;
+
+    /**
+     * 是否打开自动类型猜测
+     */
+    private boolean dynamic;
 }

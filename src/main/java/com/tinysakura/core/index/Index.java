@@ -50,11 +50,11 @@ public class Index {
          * @return
          */
         public Builder shardsNumber(Integer numberOfShards) {
-            if (index.getSetting() == null) {
-                index.setSetting(new Setting());
+            if (index.getSettings() == null) {
+                index.setSettings(new Setting());
             }
 
-            index.getSetting().setNumber_of_shards(numberOfShards);
+            index.getSettings().setNumber_of_shards(numberOfShards);
 
             return this;
         }
@@ -66,11 +66,11 @@ public class Index {
          * @return
          */
         public Builder replicasNumber(Integer numberOfReplicas) {
-            if (index.getSetting() == null) {
-                index.setSetting(new Setting());
+            if (index.getSettings() == null) {
+                index.setSettings(new Setting());
             }
 
-            index.getSetting().setNumber_of_replicas(numberOfReplicas);
+            index.getSettings().setNumber_of_replicas(numberOfReplicas);
 
             return this;
         }
@@ -81,13 +81,13 @@ public class Index {
          * @return
          */
         public Builder mapping(com.tinysakura.core.document.DocumentType documentType) {
-            if (index.getMapping() == null) {
+            if (index.getMappings() == null) {
                 Map<String, DocumentType> mapping = new HashMap<String, DocumentType>(16);
 
-                index.setMapping(mapping);
+                index.setMappings(mapping);
             }
 
-            index.getMapping().put(documentType.getDocumentMappingName(), documentType.getDocumentType());
+            index.getMappings().put(documentType.getDocumentMappingName(), documentType.getDocumentType());
 
             return this;
         }
