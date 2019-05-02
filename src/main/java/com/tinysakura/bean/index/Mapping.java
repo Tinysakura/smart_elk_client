@@ -1,6 +1,9 @@
 package com.tinysakura.bean.index;
 
+import com.tinysakura.bean.document.DocumentType;
 import lombok.Data;
+
+import java.util.Map;
 
 /**
  * @Author: chenfeihao@corp.netease.com
@@ -8,4 +11,5 @@ import lombok.Data;
  */
 @Data
 public class Mapping {
+    private Map<String, DocumentType> documentTypeMap;
 }
