@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5679a8ea-d449-4926-97e1-1e07bb644f6e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/document/DocumentType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/document/Properties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/constant/DocumentPropertiesConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Mapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Mapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Setting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tinysakura/constant/package-info.java" beforeDir="false" />
-    </list>
+    <list default="true" id="5679a8ea-d449-4926-97e1-1e07bb644f6e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,8 +27,8 @@
       <file leaf-file-name="Properties.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/document/Properties.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="114" column="10" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
+            <state relative-caret-position="960">
+              <caret line="40" column="7" lean-forward="true" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -512,7 +504,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556683768532</updated>
-      <workItem from="1556683772478" duration="25679000" />
+      <workItem from="1556683772478" duration="26105000" />
     </task>
     <servers />
   </component>
@@ -549,7 +541,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25155000" />
+    <option name="totallyTimeSpent" value="25581000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -576,7 +568,7 @@
       <window_info anchor="bottom" id="Version Control" weight="0.32969698" />
       <window_info anchor="bottom" id="Spring" weight="0.32969698" />
       <window_info anchor="bottom" id="Terminal" weight="0.39757577" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
       <window_info anchor="bottom" id="Reviews" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969698" />
       <window_info anchor="right" id="SciView" />
@@ -1046,8 +1038,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/document/Properties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="114" column="10" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
+        <state relative-caret-position="960">
+          <caret line="40" column="7" lean-forward="true" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
