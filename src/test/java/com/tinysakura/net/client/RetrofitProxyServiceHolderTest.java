@@ -27,7 +27,7 @@ public class RetrofitProxyServiceHolderTest {
 
         DocumentType music = new DocumentType.Builder().name("music").dynamic(false).properties(properties1).properties(properties2).build();
 
-        Index media = new Index.Builder().indexName("art").shardsNumber(4).replicasNumber(1)
+        Index media = new Index.Builder().indexName("arts").shardsNumber(4).replicasNumber(1)
                 .mapping(music).build();
 
         Gson gson = new Gson();
