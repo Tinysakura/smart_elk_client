@@ -1,6 +1,7 @@
 package com.tinysakura.bean.document;
 
 import com.tinysakura.constant.DocumentPropertiesConstant;
+import lombok.Data;
 
 import java.util.Map;
 
@@ -9,10 +10,10 @@ import java.util.Map;
  * @Author: chenfeihao@corp.netease.com
  * @Date: 2019/5/2
  */
-
+@Data
 public class Properties {
     /**
-     * 共有属性
+     * 公有属性
      */
 
     /**

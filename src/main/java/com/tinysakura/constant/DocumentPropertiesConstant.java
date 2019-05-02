@@ -7,7 +7,7 @@ package com.tinysakura.constant;
  */
 
 public class DocumentPropertiesConstant {
-    class Type {
+    public class Type {
         public static final String TEXT = "text";
 
         public static final String NUMBER = "number";
@@ -29,19 +29,19 @@ public class DocumentPropertiesConstant {
         public static final String TOKEN_COUNT = "token_count";
     }
 
-    class Store {
+    public class Store {
         public static final String YES = "yes";
 
         public static final String NO = "no";
     }
 
-    class Index {
+    public class Index {
         public static final String ANALYZED = "analyzed";
 
         public static final String NOT_ANALYZED = "no";
     }
 
-    class Strings {
+    public class Strings {
         class TermVector {
             public static final String NO = "no";
 
@@ -55,7 +55,7 @@ public class DocumentPropertiesConstant {
         }
     }
 
-    class Number {
+    public class Number {
         class Type {
             private static final String BYTE = "byte";
 
