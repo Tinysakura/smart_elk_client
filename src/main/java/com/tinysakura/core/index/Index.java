@@ -1,7 +1,6 @@
 package com.tinysakura.core.index;
 
 import com.tinysakura.bean.document.DocumentType;
-import com.tinysakura.bean.index.Mapping;
 import com.tinysakura.bean.index.Setting;
 import lombok.Data;
 

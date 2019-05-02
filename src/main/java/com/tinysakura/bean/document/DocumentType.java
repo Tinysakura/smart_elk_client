@@ -11,5 +11,5 @@ import java.util.Map;
  */
 @Data
 public class DocumentType {
-    private Map<String, Properties> properties;
+    private Map<String, Map<String, Object>> properties;
 }

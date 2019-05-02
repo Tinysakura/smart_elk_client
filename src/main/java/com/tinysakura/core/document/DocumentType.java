@@ -4,6 +4,7 @@ import com.tinysakura.bean.document.Properties;
 import lombok.Data;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 索引映射构造类
@@ -23,7 +24,7 @@ public class DocumentType {
 
         public Builder() {
             this.documentType = new com.tinysakura.bean.document.DocumentType();
-            documentType.setProperties(new HashMap<String, Properties>(16));
+            documentType.setProperties(new HashMap<String, Map<String, Object>>(16));
         }
 
         /**
