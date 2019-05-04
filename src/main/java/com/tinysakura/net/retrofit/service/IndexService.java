@@ -4,8 +4,11 @@ import com.tinysakura.bean.base.Acknowledged;
 import com.tinysakura.bean.index.Index;
 import io.reactivex.Observable;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
+
+import java.util.Map;
 
 
 /**
@@ -19,4 +22,7 @@ public interface IndexService {
 
     @PUT("/{index}/")
     Observable<Acknowledged> createIndex(@Path("index") String indexName);
+
+    @GET("/{index}")
+    Observable<Map<String,Index>> queryIndex(@Path("index") String indexName);
 }

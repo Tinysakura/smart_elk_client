@@ -5,6 +5,8 @@ import com.tinysakura.bean.index.Index;
 import com.tinysakura.net.retrofit.service.IndexService;
 import io.reactivex.Observable;
 
+import java.util.Map;
+
 /**
  * @Author: chenfeihao@corp.netease.com
  * @Date: 2019/5/1
@@ -17,6 +19,10 @@ public class IndexServiceImpl implements IndexService {
     }
 
     public Observable<Acknowledged> createIndex(String indexName) {
+        return null;
+    }
+
+    public Observable<Map<String,Index>> queryIndex(String indexName) {
         return null;
     }
 }

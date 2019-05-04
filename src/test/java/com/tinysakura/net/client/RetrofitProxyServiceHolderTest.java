@@ -27,12 +27,12 @@ public class RetrofitProxyServiceHolderTest {
 
         DocumentType music = new DocumentType.Builder().name("music").dynamic(false).properties(properties1).properties(properties2).build();
 
-        Index media = new Index.Builder().indexName("arts").shardsNumber(4).replicasNumber(1)
+        Index media = new Index.Builder().indexName("arts").shardsNumber(4)
                 .mapping(music).build();
 
         Gson gson = new Gson();
         System.out.println(gson.toJson(media.getIndex()));
 
-        indexService.createIndex(media.getIndexName(), media.getIndex());
+        //   indexService.createIndex(media.getIndexName(), media.getIndex());
     }
 }
