@@ -1,6 +1,7 @@
 package com.tinysakura.core.document;
 
 import com.tinysakura.bean.index.mapping.extra.*;
+import com.tinysakura.bean.routing.Routing;
 import com.tinysakura.constant.DocumentPropertiesConstant;
 import lombok.Data;
 
@@ -152,6 +153,20 @@ public class DocumentType {
             ttl.setEnabled(true);
             ttl.setDefaults(expire);
             documentType.set_ttl(ttl);
+
+            return this;
+        }
+
+        /**
+         * 设置路由字段
+         * @param path
+         * @return
+         */
+        public Builder routing(String path) {
+            Routing routing = new Routing();
+            routing.setRequired(true);
+            routing.setPath(path);
+            documentType.set_routing(routing);
 
             return this;
         }

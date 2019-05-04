@@ -1,6 +1,7 @@
 package com.tinysakura.bean.document;
 
 import com.tinysakura.bean.index.mapping.extra.*;
+import com.tinysakura.bean.routing.Routing;
 import lombok.Data;
 
 import java.util.Map;
@@ -13,6 +14,8 @@ import java.util.Map;
 @Data
 public class DocumentType {
     private Map<String, Map<String, Object>> properties;
+
+    private Routing _routing;
 
     /**
      * 是否打开自动类型猜测

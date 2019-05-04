@@ -43,4 +43,27 @@ public interface DocumentService {
      */
     @POST("/_bulk")
     Observable<JsonObject> batchPostDocument(@Body RequestBody requestBody);
+
+    /**
+     * 在指定分片上建立索引
+     * @param index
+     * @param documentType
+     * @param documentId
+     * @param document
+     * @param routing
+     * @return
+     */
+    @POST("/{index}/{documentType}/{documentId}/")
+    Observable<Acknowledged> postDocument(@Path("index") String index, @Path("documentType") String documentType, @Path("documentId") String documentId, @Body Object document, @Query("routing") String routing);
+
+    /**
+     * 在指定分片上建立索引
+     * @param index
+     * @param documentType
+     * @param document
+     * @param routing
+     * @return
+     */
+    @POST("/{index}/{documentType}/{documentId}/")
+    Observable<Acknowledged> postDocument(@Path("index") String index, @Path("documentType") String documentType, @Body Object document, @Query("routing") String routing);
 }
