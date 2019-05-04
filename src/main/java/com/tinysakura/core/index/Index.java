@@ -88,16 +88,16 @@ public class Index {
                 index.setSettings(new Setting());
             }
 
-            if (index.getSettings().getSettingIndex() == null) {
-                index.getSettings().setSettingIndex(new SettingIndex());
+            if (index.getSettings().getIndex() == null) {
+                index.getSettings().setIndex(new SettingIndex());
             }
 
-            if (index.getSettings().getSettingIndex().getAnalysis() == null) {
-                index.getSettings().getSettingIndex().setAnalysis(new Analysis());
-                index.getSettings().getSettingIndex().getAnalysis().setAnalyzer(new HashMap<String, com.tinysakura.bean.analyzer.Analyzer>());
+            if (index.getSettings().getIndex().getAnalysis() == null) {
+                index.getSettings().getIndex().setAnalysis(new Analysis());
+                index.getSettings().getIndex().getAnalysis().setAnalyzer(new HashMap<String, com.tinysakura.bean.analyzer.Analyzer>());
             }
 
-            index.getSettings().getSettingIndex().getAnalysis().getAnalyzer().put(analyzer.getName(), analyzer.getAnalyzer());
+            index.getSettings().getIndex().getAnalysis().getAnalyzer().put(analyzer.getName(), analyzer.getAnalyzer());
 
             return this;
         }
