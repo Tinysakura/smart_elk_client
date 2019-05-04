@@ -1,6 +1,7 @@
 package com.tinysakura.net.client;
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+import com.tinysakura.net.retrofit.service.DocumentService;
 import com.tinysakura.net.retrofit.service.IndexService;
 import com.tinysakura.net.retrofit.service.QueryService;
 import com.tinysakura.util.ConfigurationFileLoadUtil;
@@ -35,12 +36,15 @@ public class RetrofitServiceHolder {
 
     private static final String QUERY_SERVICE = "query";
 
+    private static final String DOCUMENT_SERVICE = "document";
+
     private static final String ELK_NODE_IP_CONFIG = "elk.node.ip";
 
     private RetrofitServiceHolder() {
         serviceMap = new HashMap<String, List<Object>>(16);
         serviceMap.put(INDEX_SERVICE, new ArrayList<Object>());
         serviceMap.put(QUERY_SERVICE, new ArrayList<Object>());
+        serviceMap.put(DOCUMENT_SERVICE, new ArrayList<Object>());
 
         elkClients = new ArrayList<Retrofit>();
 
@@ -108,9 +112,11 @@ public class RetrofitServiceHolder {
         for (Retrofit retrofit : elkClients) {
             IndexService indexService = retrofit.create(IndexService.class);
             QueryService queryService = retrofit.create(QueryService.class);
+            DocumentService documentService = retrofit.create(DocumentService.class);
 
             serviceMap.get(INDEX_SERVICE).add(indexService);
             serviceMap.get(QUERY_SERVICE).add(queryService);
+            serviceMap.get(DOCUMENT_SERVICE).add(documentService);
         }
     }
 
@@ -124,6 +130,10 @@ public class RetrofitServiceHolder {
 
     public List<Object> getQueryService() {
         return serviceMap.get(QUERY_SERVICE);
+    }
+
+    public List<Object> getDocumentService() {
+        return serviceMap.get(DOCUMENT_SERVICE);
     }
 
 }

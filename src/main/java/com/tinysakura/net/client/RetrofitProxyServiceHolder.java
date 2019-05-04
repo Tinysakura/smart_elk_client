@@ -1,8 +1,10 @@
 package com.tinysakura.net.client;
 
 import com.tinysakura.core.proxy.MultiNodeInvocationHandler;
+import com.tinysakura.net.retrofit.service.DocumentService;
 import com.tinysakura.net.retrofit.service.IndexService;
 import com.tinysakura.net.retrofit.service.QueryService;
+import com.tinysakura.net.retrofit.service.impl.DocumentServiceImpl;
 import com.tinysakura.net.retrofit.service.impl.IndexServiceImpl;
 import com.tinysakura.net.retrofit.service.impl.QuerySerciceImpl;
 
@@ -22,6 +24,8 @@ public class RetrofitProxyServiceHolder {
     private IndexService indexServiceProxy;
 
     private QueryService queryServiceProxy;
+
+    private DocumentService documentServiceProxy;
 
     private RetrofitProxyServiceHolder() {
         initIndexServiceProxy();
@@ -57,11 +61,23 @@ public class RetrofitProxyServiceHolder {
         queryServiceProxy = (QueryService) Proxy.newProxyInstance(QueryService.class.getClassLoader(), new Class[]{QueryService.class}, multiNodeInvocationHandler);
     }
 
+    private void initDocumentServiceProxy() {
+        DocumentServiceImpl target = new DocumentServiceImpl();
+
+        InvocationHandler multiNodeInvocationHandler = new MultiNodeInvocationHandler<DocumentService>(target);
+
+        documentServiceProxy = (DocumentService) Proxy.newProxyInstance(DocumentService.class.getClassLoader(), new Class[]{DocumentService.class}, multiNodeInvocationHandler);
+    }
+
     public IndexService getIndexServiceProxy() {
         return indexServiceProxy;
     }
 
     public QueryService getQueryServiceProxy() {
         return queryServiceProxy;
+    }
+
+    public DocumentService getDocumentServiceProxy() {
+        return documentServiceProxy;
     }
 }
