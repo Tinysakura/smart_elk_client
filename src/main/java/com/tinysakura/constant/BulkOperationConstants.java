@@ -8,7 +8,7 @@ package com.tinysakura.constant;
 
 public class BulkOperationConstants {
     public class Type {
-        public final static String CONCAT = "concat";
+        public final static String CONCAT = "contact";
     }
 
     public class Operation {

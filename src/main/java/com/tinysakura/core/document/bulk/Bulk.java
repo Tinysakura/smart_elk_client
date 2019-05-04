@@ -1,6 +1,6 @@
 package com.tinysakura.core.document.bulk;
 
-import com.alibaba.fastjson.JSON;
+import com.google.gson.Gson;
 import com.tinysakura.bean.document.bulk.BulkOperation;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -8,7 +8,10 @@ import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -32,7 +35,7 @@ public class Bulk {
      * @param file
      * @return
      */
-    public MultipartBody.Part fromBatchJsonFile(File file) {
+    public static MultipartBody.Part fromBatchJsonFile(File file) {
         RequestBody fileRequestBody = RequestBody.create(MediaType.parse("multipart/form-data"), file);
 
         MultipartBody.Part part =
@@ -61,17 +64,46 @@ public class Bulk {
         public MultipartBody.Part build() {
             StringBuilder sb = new StringBuilder();
             Map<String, BulkOperation> operationMap = new HashMap<String, BulkOperation>(1);
+            Gson gson = new Gson();
+
+            File file = null;
+            BufferedWriter bufferedWriter = null;
+            try {
+                file = new File(System.getProperty("user.dir").concat("/src/main/resource/documents.json"));
+                if (!file.exists()) {
+                    file.createNewFile();
+                }
+                bufferedWriter = new BufferedWriter(new FileWriter(file));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
             for (BulkItem bulkItem : bulkItems) {
                 operationMap.put(bulkItem.getOperation(), bulkItem.getBulkItem().getBulkOperation());
-                sb.append(JSON.toJSONString(operationMap)).append("\n");
+                String operation = gson.toJson(operationMap);
+                String document = gson.toJson(bulkItem.getBulkItem().getDocument());
+                sb.append(operation).append("\n");
+                try {
+                    bufferedWriter.write(operation);
+                    bufferedWriter.newLine();
+                    bufferedWriter.write(document);
+                    bufferedWriter.newLine();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 operationMap.clear();
-
-                sb.append(JSON.toJSONString(bulkItem.getBulkItem().getDocument()));
             }
 
-            log.info("documents.json content : {}", sb.toString());
-            return fromBytes(sb.toString().getBytes());
+            try {
+                bufferedWriter.close();
+                // file.delete();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            log.info("documents.json content\n{}", sb.toString());
+            // return fromBytes(sb.toString().getBytes());
+            return Bulk.fromBatchJsonFile(file);
         }
 
         private MultipartBody.Part fromBytes(byte[] bytes) {

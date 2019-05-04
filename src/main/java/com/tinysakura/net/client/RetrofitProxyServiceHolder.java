@@ -30,6 +30,7 @@ public class RetrofitProxyServiceHolder {
     private RetrofitProxyServiceHolder() {
         initIndexServiceProxy();
         initQueryServiceProxy();
+        initDocumentServiceProxy();
     }
 
     public static RetrofitProxyServiceHolder getInstance() {

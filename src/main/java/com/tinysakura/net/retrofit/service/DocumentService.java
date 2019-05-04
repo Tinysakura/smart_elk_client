@@ -4,10 +4,7 @@ import com.tinysakura.bean.base.Acknowledged;
 import com.tinysakura.bean.document.bulk.BulkResult;
 import io.reactivex.Observable;
 import okhttp3.MultipartBody;
-import retrofit2.http.Body;
-import retrofit2.http.POST;
-import retrofit2.http.Part;
-import retrofit2.http.Path;
+import retrofit2.http.*;
 
 /**
  * 文档相关操作 Rest Api
@@ -43,6 +40,7 @@ public interface DocumentService {
      * @param batchJsonFile 索引信息文件，格式需要遵循elk官方要求
      * @return
      */
-    @POST("/bulk/")
+    @Multipart
+    @POST("/_bulk")
     Observable<BulkResult> batchPostDocument(@Part MultipartBody.Part batchJsonFile);
 }

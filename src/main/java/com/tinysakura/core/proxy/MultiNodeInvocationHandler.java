@@ -1,6 +1,7 @@
 package com.tinysakura.core.proxy;
 
 import com.tinysakura.net.client.RetrofitServiceHolder;
+import com.tinysakura.net.retrofit.service.DocumentService;
 import com.tinysakura.net.retrofit.service.IndexService;
 import com.tinysakura.net.retrofit.service.QueryService;
 import io.reactivex.Observable;
@@ -50,6 +51,10 @@ public class MultiNodeInvocationHandler<T> implements InvocationHandler {
 
         if (target instanceof QueryService) {
             retrofitServices = retrofitServiceHolder.getQueryService();
+        }
+
+        if (target instanceof DocumentService) {
+            retrofitServices = retrofitServiceHolder.getDocumentService();
         }
     }
 
