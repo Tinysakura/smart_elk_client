@@ -1,5 +1,6 @@
 package com.tinysakura.bean.index;
 
+import com.tinysakura.bean.analyzer.Analysis;
 import lombok.Data;
 
 import java.util.Map;
@@ -30,4 +31,9 @@ public class Setting {
     private String providedName;
 
     private Map<String, String> version;
+
+    /**
+     * 自定义分析器
+     */
+    private SettingIndex index;
 }

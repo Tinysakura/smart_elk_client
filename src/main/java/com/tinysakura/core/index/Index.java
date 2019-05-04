@@ -1,7 +1,10 @@
 package com.tinysakura.core.index;
 
+import com.tinysakura.bean.analyzer.Analysis;
 import com.tinysakura.bean.document.DocumentType;
 import com.tinysakura.bean.index.Setting;
+import com.tinysakura.bean.index.SettingIndex;
+import com.tinysakura.core.analyzer.Analyzer;
 import lombok.Data;
 
 import java.util.HashMap;
@@ -71,6 +74,30 @@ public class Index {
             }
 
             index.getSettings().setNumber_of_replicas(numberOfReplicas);
+
+            return this;
+        }
+
+        /**
+         * 为索引设置自定义分析器
+         * @param analyzer
+         * @return
+         */
+        public Builder analysis(Analyzer analyzer) {
+            if (index.getSettings() == null) {
+                index.setSettings(new Setting());
+            }
+
+            if (index.getSettings().getSettingIndex() == null) {
+                index.getSettings().setSettingIndex(new SettingIndex());
+            }
+
+            if (index.getSettings().getSettingIndex().getAnalysis() == null) {
+                index.getSettings().getSettingIndex().setAnalysis(new Analysis());
+                index.getSettings().getSettingIndex().getAnalysis().setAnalyzer(new HashMap<String, com.tinysakura.bean.analyzer.Analyzer>());
+            }
+
+            index.getSettings().getSettingIndex().getAnalysis().getAnalyzer().put(analyzer.getName(), analyzer.getAnalyzer());
 
             return this;
         }

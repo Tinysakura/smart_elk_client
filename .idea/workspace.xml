@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5679a8ea-d449-4926-97e1-1e07bb644f6e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/IndexQueryResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/tinysakura/net/retrofit/service/IndexServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/analyzer/Analysis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/analyzer/Analyzer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/filter/Filter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/SettingIndex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/core/analyzer/Analyzer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/tinysakura/core/analyzer/AnalyzerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Setting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tinysakura/net/retrofit/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tinysakura/net/retrofit/service/IndexService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/net/retrofit/service/IndexService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tinysakura/net/retrofit/service/impl/IndexServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/net/retrofit/service/impl/IndexServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tinysakura/net/client/RetrofitProxyServiceHolderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tinysakura/net/client/RetrofitProxyServiceHolderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tinysakura/core/index/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/core/index/Index.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/tinysakura/bean/index/Setting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tinysakura/bean/index/Setting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tinysakura/net/retrofit/service/IndexService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tinysakura/net/retrofit/service/IndexService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tinysakura/net/retrofit/service/impl/IndexServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tinysakura/net/retrofit/service/impl/IndexServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/tinysakura/net/client/RetrofitProxyServiceHolderTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/tinysakura/net/client/RetrofitProxyServiceHolderTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tinysakura/core/index/Index$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tinysakura/core/index/Index$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tinysakura/core/index/Index.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tinysakura/core/index/Index.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/tinysakura/net/retrofit/service/IndexServiceTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/tinysakura/net/retrofit/service/IndexServiceTest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/tinysakura/net/retrofit/service/IndexServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/tinysakura/net/retrofit/service/IndexServiceTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,51 +27,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="scratch_12.java" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_12.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="62" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IndexQueryResult.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/IndexQueryResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Setting.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Setting.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="610">
-              <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IndexService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/net/retrofit/service/IndexService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Index.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Index.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -79,11 +36,59 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RetrofitProxyServiceHolderTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/tinysakura/net/client/RetrofitProxyServiceHolderTest.java">
+      <file leaf-file-name="Setting.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Setting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="19" column="100" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="100" />
+            <state relative-caret-position="314">
+              <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SettingIndex.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/SettingIndex.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Analysis.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/analyzer/Analysis.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Index.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/core/index/Index.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="473">
+              <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnalyzerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/tinysakura/core/analyzer/AnalyzerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,52 +99,44 @@
       <file leaf-file-name="IndexServiceTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/tinysakura/net/retrofit/service/IndexServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
+            <state relative-caret-position="504">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#547#763#0" expanded="true" />
-                <element signature="e#762#763#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/net/retrofit/service/impl/IndexServiceImpl.java">
+      <file leaf-file-name="RetrofitProxyServiceHolderTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/tinysakura/net/client/RetrofitProxyServiceHolderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+            <state relative-caret-position="469">
+              <caret line="30" column="40" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="30" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#431#432#0" expanded="true" />
-                <element signature="e#458#459#0" expanded="true" />
-                <element signature="e#527#528#0" expanded="true" />
-                <element signature="e#554#555#0" expanded="true" />
-                <element signature="e#710#711#0" expanded="true" />
-                <element signature="e#737#738#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Consumer.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/io/reactivex/rxjava2/rxjava/2.2.0/rxjava-2.2.0.jar!/io/reactivex/functions/Consumer.class">
+      <file leaf-file-name="Analyzer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/core/analyzer/Analyzer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+            <state relative-caret-position="1388">
+              <caret line="59" column="28" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Index.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/core/index/Index.java">
+      <file leaf-file-name="Analyzer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/analyzer/Analyzer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="432">
+              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -166,11 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/net.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_9.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/core/index.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/constant/enums/ClientKeyEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/net/client/RetrofitClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/net/client/RetrofitService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/net/retrofit/service/QueryService.java" />
@@ -204,17 +196,24 @@
         <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/constant/DocumentPropertiesConstant.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/net/client/RetrofitProxyServiceHolder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/core/document/Properties.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/core/index/Index.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/document/DocumentType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/core/document/DocumentType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Index.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Setting.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/tinysakura/net/client/RetrofitProxyServiceHolderTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/tinysakura/net/retrofit/service/IndexServiceTest.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_12.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/IndexQueryResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/net/retrofit/service/impl/IndexServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/net/retrofit/service/IndexService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/analyzer/Analysis.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/analyzer/Analyzer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/filter/Filter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/core/analyzer/Analysis.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/core/analyzer/Analyzer.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tinysakura/core/analyzer/AnalyzerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/SettingIndex.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/core/index/Index.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Setting.java" />
       </list>
     </option>
   </component>
@@ -305,7 +304,17 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tinysakura" type="462c0819:PsiDirectoryNode" />
               <item name="bean" type="462c0819:PsiDirectoryNode" />
-              <item name="document" type="462c0819:PsiDirectoryNode" />
+              <item name="analyzer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smart_elk_client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smart_elk_client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tinysakura" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="smart_elk_client" type="b2602c69:ProjectViewProjectNode" />
@@ -334,6 +343,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tinysakura" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smart_elk_client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smart_elk_client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tinysakura" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="analyzer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="smart_elk_client" type="b2602c69:ProjectViewProjectNode" />
@@ -433,7 +452,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tinysakura" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="proxy" type="462c0819:PsiDirectoryNode" />
+              <item name="analyzer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="smart_elk_client" type="b2602c69:ProjectViewProjectNode" />
@@ -443,6 +462,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tinysakura" type="462c0819:PsiDirectoryNode" />
               <item name="net" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smart_elk_client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smart_elk_client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tinysakura" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="smart_elk_client" type="b2602c69:ProjectViewProjectNode" />
@@ -504,9 +533,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.IndexServiceTest.queryIndexTest">
+  <component name="RunManager" selected="JUnit.AnalyzerTest.AnalyzerTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="AnalyzerTest.AnalyzerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="smart_elk_client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tinysakura.core.analyzer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.tinysakura.core.analyzer" />
+      <option name="MAIN_CLASS_NAME" value="com.tinysakura.core.analyzer.AnalyzerTest" />
+      <option name="METHOD_NAME" value="AnalyzerTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="IndexServiceTest.queryIndexTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="smart_elk_client" />
@@ -577,29 +629,6 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="RetrofitServiceHolderTest.retrofitServiceHolderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="smart_elk_client" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tinysakura.net.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.tinysakura.net.client" />
-      <option name="MAIN_CLASS_NAME" value="com.tinysakura.net.client.RetrofitServiceHolderTest" />
-      <option name="METHOD_NAME" value="retrofitServiceHolderTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -643,19 +672,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.RetrofitServiceHolderTest.retrofitServiceHolderTest" />
       <item itemvalue="JUnit.MultiNodeInvocationHandlerTest.multiNodeInvocationHandlerTest" />
       <item itemvalue="JUnit.RetrofitProxyServiceHolderTest.RetrofitProxyServiceHolderTest" />
       <item itemvalue="JUnit.IndexServiceTest.queryIndexTest" />
       <item itemvalue="Java Scratch.Scratch" />
+      <item itemvalue="JUnit.AnalyzerTest.AnalyzerTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AnalyzerTest.AnalyzerTest" />
         <item itemvalue="JUnit.IndexServiceTest.queryIndexTest" />
         <item itemvalue="Java Scratch.Scratch" />
         <item itemvalue="JUnit.RetrofitProxyServiceHolderTest.RetrofitProxyServiceHolderTest" />
         <item itemvalue="JUnit.MultiNodeInvocationHandlerTest.multiNodeInvocationHandlerTest" />
-        <item itemvalue="JUnit.RetrofitServiceHolderTest.retrofitServiceHolderTest" />
       </list>
     </recent_temporary>
   </component>
@@ -674,15 +703,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MultiNodeInvocationHandlerTest_multiNodeInvocationHandlerTest - 2019.05.01 at 20h 28m 55s.xml">
-      <configuration name="MultiNodeInvocationHandlerTest.multiNodeInvocationHandlerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MultiNodeInvocationHandlerTest_multiNodeInvocationHandlerTest - 2019.05.01 at 20h 29m 59s.xml">
-      <configuration name="MultiNodeInvocationHandlerTest.multiNodeInvocationHandlerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MultiNodeInvocationHandlerTest_multiNodeInvocationHandlerTest - 2019.05.01 at 20h 31m 41s.xml">
-      <configuration name="MultiNodeInvocationHandlerTest.multiNodeInvocationHandlerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RetrofitProxyServiceHolderTest_RetrofitProxyServiceHolderTest - 2019.05.02 at 15h 24m 05s.xml">
       <configuration name="RetrofitProxyServiceHolderTest.RetrofitProxyServiceHolderTest" configurationId="JUnit" />
     </history-entry>
@@ -704,9 +724,18 @@
     <history-entry file="IndexServiceTest_queryIndexTest - 2019.05.04 at 11h 08m 17s.xml">
       <configuration name="IndexServiceTest.queryIndexTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="IndexServiceTest_queryIndexTest - 2019.05.04 at 11h 48m 25s.xml">
+      <configuration name="IndexServiceTest.queryIndexTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AnalyzerTest_AnalyzerTest - 2019.05.04 at 12h 18m 33s.xml">
+      <configuration name="AnalyzerTest.AnalyzerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AnalyzerTest_AnalyzerTest - 2019.05.04 at 12h 21m 59s.xml">
+      <configuration name="AnalyzerTest.AnalyzerTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33039000" />
+    <option name="totallyTimeSpent" value="35422000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -729,7 +758,7 @@
       <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" />
       <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32969698" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32969698" />
       <window_info anchor="bottom" id="Version Control" weight="0.32969698" />
       <window_info anchor="bottom" id="Spring" weight="0.32969698" />
       <window_info anchor="bottom" id="Terminal" weight="0.39757577" />
@@ -813,12 +842,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/tinysakura/net/retrofit/service/IndexServiceTest.java</url>
-          <line>22</line>
-          <properties />
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$APPLICATION_CONFIG_DIR$/scratches/scratch_12.java</url>
           <line>47</line>
           <properties />
@@ -878,27 +901,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/core/index.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/core/package-info.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/constant/package-info.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/constant/enums/ClientKeyEnum.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/net/retrofit/package-info.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/squareup/retrofit2/retrofit/2.3.0/retrofit-2.3.0.jar!/retrofit2/http/Path.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/squareup/retrofit2/retrofit/2.3.0/retrofit-2.3.0.jar!/retrofit2/http/Query.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/tinysakura/net/package-info.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1094,16 +1096,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/core/index/Index.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/core/proxy/MultiNodeInvocationHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-748">
@@ -1114,49 +1106,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tinysakura/net/client/RetrofitProxyServiceHolderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="19" column="100" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="100" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/reactivex/rxjava2/rxjava/2.2.0/rxjava-2.2.0.jar!/io/reactivex/functions/Consumer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Setting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tinysakura/net/retrofit/service/IndexServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#547#763#0" expanded="true" />
-            <element signature="e#762#763#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Index.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1197,6 +1150,114 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
           <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/filter/Filter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/analyzer/Analysis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/analyzer/Analyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/core/analyzer/Analyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1388">
+          <caret line="59" column="28" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tinysakura/net/retrofit/service/IndexServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tinysakura/net/client/RetrofitProxyServiceHolderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="30" column="40" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="30" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_13.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/SettingIndex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Index.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/core/index/Index.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tinysakura/core/analyzer/AnalyzerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Setting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
