@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5679a8ea-d449-4926-97e1-1e07bb644f6e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/analyzer/Analysis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/analyzer/Analyzer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/filter/Filter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/SettingIndex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/core/analyzer/Analyzer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/tinysakura/core/analyzer/AnalyzerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Setting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tinysakura/core/index/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tinysakura/core/index/Index.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tinysakura/bean/index/Setting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tinysakura/bean/index/Setting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tinysakura/core/index/Index$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tinysakura/core/index/Index$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tinysakura/core/index/Index.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tinysakura/core/index/Index.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/tinysakura/net/retrofit/service/IndexServiceTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/tinysakura/net/retrofit/service/IndexServiceTest$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/tinysakura/net/retrofit/service/IndexServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/tinysakura/net/retrofit/service/IndexServiceTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +26,8 @@
       <file leaf-file-name="Setting.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Setting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+            <state relative-caret-position="336">
+              <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -735,7 +722,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35422000" />
+    <option name="totallyTimeSpent" value="35441000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -758,11 +745,11 @@
       <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" />
       <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32969698" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32969698" />
       <window_info anchor="bottom" id="Version Control" weight="0.32969698" />
       <window_info anchor="bottom" id="Spring" weight="0.32969698" />
       <window_info anchor="bottom" id="Terminal" weight="0.39757577" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
       <window_info anchor="bottom" id="Reviews" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969698" />
       <window_info anchor="right" id="SciView" />
@@ -1256,8 +1243,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tinysakura/bean/index/Setting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+        <state relative-caret-position="336">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

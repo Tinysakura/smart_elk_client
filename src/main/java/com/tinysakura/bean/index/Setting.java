@@ -1,6 +1,5 @@
 package com.tinysakura.bean.index;
 
-import com.tinysakura.bean.analyzer.Analysis;
 import lombok.Data;
 
 import java.util.Map;
