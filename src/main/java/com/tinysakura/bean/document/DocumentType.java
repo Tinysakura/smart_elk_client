@@ -1,5 +1,6 @@
 package com.tinysakura.bean.document;
 
+import com.tinysakura.bean.index.mapping.extra.*;
 import lombok.Data;
 
 import java.util.Map;
@@ -17,4 +18,20 @@ public class DocumentType {
      * 是否打开自动类型猜测
      */
     private boolean dynamic;
+
+    private All _all;
+
+    private Id _id;
+
+    private Index _index;
+
+    private Size _size;
+
+    private Source _source;
+
+    private Timestamp _timestamp;
+
+    private TTL _ttl;
+
+    private Type _type;
 }

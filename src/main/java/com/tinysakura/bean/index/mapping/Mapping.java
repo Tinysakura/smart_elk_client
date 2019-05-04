@@ -1,4 +1,4 @@
-package com.tinysakura.bean.index;
+package com.tinysakura.bean.index.mapping;
 
 import com.tinysakura.bean.document.DocumentType;
 import lombok.Data;
