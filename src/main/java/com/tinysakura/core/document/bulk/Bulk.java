@@ -5,13 +5,9 @@ import com.tinysakura.bean.document.bulk.BulkOperation;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.MediaType;
-import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -35,13 +31,11 @@ public class Bulk {
      * @param file
      * @return
      */
-    public static MultipartBody.Part fromBatchJsonFile(File file) {
-        RequestBody fileRequestBody = RequestBody.create(MediaType.parse("multipart/form-data"), file);
+    public static RequestBody fromBatchJsonFile(File file) {
+        MediaType mediaType = MediaType.parse("text/plain");
+        RequestBody body = RequestBody.create(mediaType, file);
 
-        MultipartBody.Part part =
-                MultipartBody.Part.createFormData(file.getName(), file.getName(), fileRequestBody);
-
-        return part;
+        return body;
     }
 
     public static final class Builder{
@@ -61,58 +55,28 @@ public class Bulk {
          * 根据bulkItems生成符合elk要求的request body
          * @return
          */
-        public MultipartBody.Part build() {
+        public RequestBody build() {
             StringBuilder sb = new StringBuilder();
             Map<String, BulkOperation> operationMap = new HashMap<String, BulkOperation>(1);
             Gson gson = new Gson();
-
-            File file = null;
-            BufferedWriter bufferedWriter = null;
-            try {
-                file = new File(System.getProperty("user.dir").concat("/src/main/resource/documents.json"));
-                if (!file.exists()) {
-                    file.createNewFile();
-                }
-                bufferedWriter = new BufferedWriter(new FileWriter(file));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
 
             for (BulkItem bulkItem : bulkItems) {
                 operationMap.put(bulkItem.getOperation(), bulkItem.getBulkItem().getBulkOperation());
                 String operation = gson.toJson(operationMap);
                 String document = gson.toJson(bulkItem.getBulkItem().getDocument());
                 sb.append(operation).append("\n");
-                try {
-                    bufferedWriter.write(operation);
-                    bufferedWriter.newLine();
-                    bufferedWriter.write(document);
-                    bufferedWriter.newLine();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
                 operationMap.clear();
             }
 
-            try {
-                bufferedWriter.close();
-                // file.delete();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
             log.info("documents.json content\n{}", sb.toString());
-            // return fromBytes(sb.toString().getBytes());
-            return Bulk.fromBatchJsonFile(file);
+            return fromJsonStr(sb.toString());
         }
 
-        private MultipartBody.Part fromBytes(byte[] bytes) {
-            RequestBody fileRequestBody = RequestBody.create(MediaType.parse("multipart/form-data"), bytes);
+        private  RequestBody fromJsonStr(String jsonStr) {
+            MediaType mediaType = MediaType.parse("text/plain");
+            RequestBody body = RequestBody.create(mediaType, jsonStr);
 
-            MultipartBody.Part part =
-                    MultipartBody.Part.createFormData("documents.json", "documents.json", fileRequestBody);
-
-            return part;
+            return body;
         }
     }
 }

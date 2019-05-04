@@ -1,9 +1,11 @@
 package com.tinysakura.net.retrofit.service;
 
+import com.google.gson.JsonObject;
 import com.tinysakura.bean.base.Acknowledged;
 import com.tinysakura.bean.document.bulk.BulkResult;
 import io.reactivex.Observable;
 import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 import retrofit2.http.*;
 
 /**
@@ -37,10 +39,8 @@ public interface DocumentService {
 
     /**
      * 为文档批量建立索引
-     * @param batchJsonFile 索引信息文件，格式需要遵循elk官方要求
      * @return
      */
-    @Multipart
     @POST("/_bulk")
-    Observable<BulkResult> batchPostDocument(@Part MultipartBody.Part batchJsonFile);
+    Observable<JsonObject> batchPostDocument(@Body RequestBody requestBody);
 }

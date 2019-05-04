@@ -1,13 +1,13 @@
 package com.tinysakura.net.retrofit.service;
 
-import com.tinysakura.bean.document.bulk.BulkResult;
+import com.google.gson.JsonObject;
 import com.tinysakura.bean.test.Music;
 import com.tinysakura.constant.BulkOperationConstants;
 import com.tinysakura.core.document.bulk.Bulk;
 import com.tinysakura.core.document.bulk.BulkItem;
 import com.tinysakura.net.client.RetrofitProxyServiceHolder;
 import io.reactivex.functions.Consumer;
-import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 import org.junit.Test;
 
 /**
@@ -29,13 +29,14 @@ public class DocumentServiceTest {
         BulkItem bulkItem2 = new BulkItem.Builder().operation(BulkOperationConstants.Operation.CREATE).document(new Music("Taylor swift", "Love Story"))
                 .documentId("4").index("media").type(BulkOperationConstants.Type.CONCAT).build();
 
-        MultipartBody.Part part = new Bulk.Builder().item(bulkItem1).item(bulkItem2).build();
+        RequestBody requestBody = new Bulk.Builder().item(bulkItem1).item(bulkItem2).build();
 
         DocumentService documentService = RetrofitProxyServiceHolder.getInstance().getDocumentServiceProxy();
-        documentService.batchPostDocument(part).subscribe(new Consumer<BulkResult>() {
-            public void accept(BulkResult bulkResult) throws Exception {
+        documentService.batchPostDocument(requestBody).subscribe(new Consumer<JsonObject>() {
+            public void accept(JsonObject bulkResult) throws Exception {
                 System.out.println(bulkResult);
             }
         });
     }
+
 }

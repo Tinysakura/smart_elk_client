@@ -1,10 +1,10 @@
 package com.tinysakura.net.retrofit.service.impl;
 
+import com.google.gson.JsonObject;
 import com.tinysakura.bean.base.Acknowledged;
-import com.tinysakura.bean.document.bulk.BulkResult;
 import com.tinysakura.net.retrofit.service.DocumentService;
 import io.reactivex.Observable;
-import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 
 /**
  * @Author: chenfeihao@corp.netease.com
@@ -20,7 +20,8 @@ public class DocumentServiceImpl implements DocumentService {
         return null;
     }
 
-    public Observable<BulkResult> batchPostDocument(MultipartBody.Part batchJsonFile) {
+    public Observable<JsonObject> batchPostDocument(RequestBody requestBody) {
         return null;
     }
+
 }
