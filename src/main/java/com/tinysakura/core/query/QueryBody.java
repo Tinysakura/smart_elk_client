@@ -226,6 +226,17 @@ public class QueryBody {
             return this;
         }
 
+        /**
+         * 指定查询体进行查询(包含基本查询与复合查询)
+         * @param query
+         * @return
+         */
+        public Builder query(Query query) {
+            this.queryBody.setQuery(query);
+
+            return this;
+        }
+
         public QueryBody build() {
             if (partialMap != null) {
                 this.queryBody.setPartial_fields(partialMap);
