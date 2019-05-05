@@ -24,4 +24,12 @@ public class DocumentServiceImpl implements DocumentService {
         return null;
     }
 
+    public Observable<Acknowledged> postDocument(String index, String documentType, String documentId, Object document, String routing) {
+        return null;
+    }
+
+    public Observable<Acknowledged> postDocument(String index, String documentType, Object document, String routing) {
+        return null;
+    }
+
 }
