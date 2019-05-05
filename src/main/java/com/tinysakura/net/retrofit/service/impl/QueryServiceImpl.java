@@ -12,6 +12,26 @@ import io.reactivex.Observable;
 
 public class QueryServiceImpl implements QueryService {
     @Override
+    public Observable<QueryResponse> search(String index, String documentType, QueryBody queryBody, String searchType) {
+        return null;
+    }
+
+    @Override
+    public Observable<QueryResponse> search(String index, QueryBody queryBody, String searchType) {
+        return null;
+    }
+
+    @Override
+    public Observable<QueryResponse> search(String index, String documentType, QueryBody queryBody, String searchType, Class clazz) {
+        return null;
+    }
+
+    @Override
+    public Observable<QueryResponse> search(String index, QueryBody queryBody, String searchType, Class clazz) {
+        return null;
+    }
+
+    @Override
     public Observable<QueryResponse> search(String index, String documentType, QueryBody queryBody) {
         return null;
     }

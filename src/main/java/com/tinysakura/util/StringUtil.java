@@ -16,4 +16,16 @@ public class StringUtil {
         str = str.substring(0, 1).toUpperCase() + str.substring(1);
         return  str;
     }
+
+    public static String jointStringArrayWithRegex(String[] array, String regex) {
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < array.length - 1; i++) {
+            sb.append(array[i]).append(regex);
+        }
+
+        sb.append(array[array.length - 1]);
+
+        return sb.toString();
+    }
 }

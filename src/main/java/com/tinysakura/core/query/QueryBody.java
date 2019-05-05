@@ -3,6 +3,8 @@ package com.tinysakura.core.query;
 import com.tinysakura.bean.query.Partial;
 import com.tinysakura.bean.query.Query;
 import com.tinysakura.bean.query.QueryString;
+import com.tinysakura.constant.QueryConstant;
+import com.tinysakura.util.StringUtil;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -24,12 +26,26 @@ public class QueryBody {
 
     private String documentType;
 
+    /**
+     * 搜索执行偏好{@link com.tinysakura.constant.QueryConstant.SearchPreference}
+     */
+    private String searchPreference;
+
+    /**
+     * 搜索类型{@link com.tinysakura.constant.QueryConstant.SearchType}
+     */
+    private String searchType;
+
     public static final class Builder{
         private com.tinysakura.bean.query.QueryBody queryBody;
 
         private String index;
 
+        private String searchPreference;
+
         private String documentType;
+
+        private String searchType;
 
         private List<String> fieldsList;
 
@@ -57,6 +73,47 @@ public class QueryBody {
          */
         public Builder documentType(String documentType) {
             this.documentType = documentType;
+
+            return this;
+        }
+
+        public Builder searchPreference(String searchPreference) {
+            if (this.searchPreference == null || !this.searchPreference.startsWith("_shards")) {
+                this.searchPreference = searchPreference;
+            } else {
+                this.searchPreference = this.searchType.concat(";").concat(searchPreference);
+            }
+
+            return this;
+        }
+
+        /**
+         * 只在指定的分片上执行
+         * @param shards
+         * @return
+         */
+        public Builder onlyShards(String[] shards) {
+            this.searchPreference = QueryConstant.SearchPreference.SHARDS.concat(StringUtil.jointStringArrayWithRegex(shards, ","));
+
+            return this;
+        }
+
+        @Deprecated
+        public Builder onlyNode(String nodeId) {
+            this.searchPreference = QueryConstant.SearchPreference.ONLY_NODE.concat(nodeId);
+
+            return this;
+        }
+
+        @Deprecated
+        public Builder preferNode(String nodeId) {
+            this.searchPreference = QueryConstant.SearchPreference.PREFER_NODE.concat(nodeId);
+
+            return this;
+        }
+
+        public Builder searchType(String searchType) {
+            this.searchType = searchType;
 
             return this;
         }
@@ -182,6 +239,7 @@ public class QueryBody {
             queryBody.setQueryBody(this.queryBody);
             queryBody.setIndex(this.index);
             queryBody.setDocumentType(this.documentType);
+            queryBody.setSearchType(this.searchType);
 
             return queryBody;
         }
