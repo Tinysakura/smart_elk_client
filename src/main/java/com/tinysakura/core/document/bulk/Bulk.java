@@ -31,7 +31,7 @@ public class Bulk {
      * @param file
      * @return
      */
-    public static RequestBody fromBatchJsonFile(File file) {
+    public static RequestBody fromJsonFile(File file) {
         MediaType mediaType = MediaType.parse("text/plain");
         RequestBody body = RequestBody.create(mediaType, file);
 
@@ -64,7 +64,7 @@ public class Bulk {
                 operationMap.put(bulkItem.getOperation(), bulkItem.getBulkItem().getBulkOperation());
                 String operation = gson.toJson(operationMap);
                 String document = gson.toJson(bulkItem.getBulkItem().getDocument());
-                sb.append(operation).append("\n");
+                sb.append(operation).append("\n").append(document).append("\n");
                 operationMap.clear();
             }
 
