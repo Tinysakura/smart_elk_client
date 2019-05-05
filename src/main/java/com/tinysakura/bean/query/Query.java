@@ -1,5 +1,6 @@
 package com.tinysakura.bean.query;
 
+import com.tinysakura.bean.query.extra.CommonEntry;
 import com.tinysakura.bean.query.extra.WordEntry;
 import lombok.Data;
 
@@ -23,4 +24,6 @@ public class Query {
      * 多词条查询
      */
     Map<String, Object> terms;
+
+    Map<String, CommonEntry> common;
 }

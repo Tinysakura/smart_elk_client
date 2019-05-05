@@ -68,4 +68,10 @@ public class QueryConstant {
         public static final String SHARDS = "_shards:";
     }
 
+    public class Bool {
+        private static final String AND = "and";
+
+        private static final String OR = "or";
+    }
+
 }
