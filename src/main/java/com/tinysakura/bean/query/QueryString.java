@@ -11,5 +11,5 @@ public class QueryString {
     /**
      * 查询条件
      */
-    String Query;
+    String query;
 }

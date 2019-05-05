@@ -94,7 +94,7 @@ public class QueryBody {
          * @param minScore
          * @return
          */
-        public Builder minScore(double minScore) {
+        public Builder minScore(float minScore) {
             queryBody.setMin_score(minScore);
 
             return this;
@@ -175,7 +175,7 @@ public class QueryBody {
             }
 
             if (fieldsList != null) {
-                this.queryBody.setFields(fieldsList.toArray(new String[]{}));
+                this.queryBody.setStored_fields(fieldsList.toArray(new String[]{}));
             }
 
             QueryBody queryBody = new QueryBody();

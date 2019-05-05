@@ -34,15 +34,17 @@ public class QueryBody {
     /**
      * 限制返回文档结果的最小得分
      */
-    Double min_score;
+    Float min_score;
 
     /**
      * 指定在响应中包含的字段（只能返回存储在索引中的字段）
      */
-    String[] fields;
+    String[] stored_fields;
 
     /**
      * 字段排除条件
+     * partial_fields(5.6.14版本的elk不支持该节点)
      */
+    @Deprecated
     Map<String, Partial> partial_fields;
 }

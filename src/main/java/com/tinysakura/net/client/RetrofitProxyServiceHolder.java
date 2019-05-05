@@ -6,7 +6,7 @@ import com.tinysakura.net.retrofit.service.IndexService;
 import com.tinysakura.net.retrofit.service.QueryService;
 import com.tinysakura.net.retrofit.service.impl.DocumentServiceImpl;
 import com.tinysakura.net.retrofit.service.impl.IndexServiceImpl;
-import com.tinysakura.net.retrofit.service.impl.QuerySerciceImpl;
+import com.tinysakura.net.retrofit.service.impl.QueryServiceImpl;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
@@ -55,7 +55,7 @@ public class RetrofitProxyServiceHolder {
     }
 
     private void initQueryServiceProxy() {
-        QuerySerciceImpl target = new QuerySerciceImpl();
+        QueryServiceImpl target = new QueryServiceImpl();
 
         InvocationHandler multiNodeInvocationHandler = new MultiNodeInvocationHandler<QueryService>(target);
 
