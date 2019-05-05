@@ -2,6 +2,8 @@ package com.tinysakura.bean.query.result;
 
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * 查询结果bean
  * @Author: chenfeihao@corp.netease.com
@@ -28,4 +30,6 @@ public class QueryResponse {
      * 文档信息
      */
     Hits hits;
+
+    List results;
 }

@@ -2,6 +2,7 @@ package com.tinysakura.net.retrofit.service;
 
 import com.google.gson.Gson;
 import com.tinysakura.bean.query.result.QueryResponse;
+import com.tinysakura.bean.test.Music;
 import com.tinysakura.core.query.QueryBody;
 import com.tinysakura.net.client.RetrofitProxyServiceHolder;
 import io.reactivex.functions.Consumer;
@@ -21,14 +22,14 @@ public class QueryServiceTest {
 
         QueryBody.Builder builder = new QueryBody.Builder();
 
-        final QueryBody queryBody = builder.fields("author").fields("title").from(1).size(10).minScore(0.75f)
+        final QueryBody queryBody = builder.fields("author").fields("title").from(0).size(10)
                 .version(true).luceneQuery("title:Love Story")
                 .build();
 
         Gson gson = new Gson();
         System.out.println(gson.toJson(queryBody.getQueryBody()));
 
-        queryService.search("medias", "music", queryBody.getQueryBody()).subscribe(new Consumer<QueryResponse>() {
+        queryService.search("media", queryBody.getQueryBody(), Music.class).subscribe(new Consumer<QueryResponse>() {
             public void accept(QueryResponse queryResponse) throws Exception {
                 System.out.println(queryResponse);
             }

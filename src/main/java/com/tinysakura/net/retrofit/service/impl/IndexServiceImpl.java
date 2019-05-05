@@ -13,16 +13,18 @@ import java.util.Map;
  */
 
 public class IndexServiceImpl implements IndexService {
-
+    @Override
     public Observable<Acknowledged> createIndex(String indexName, Index index) {
         return null;
     }
 
+    @Override
     public Observable<Acknowledged> createIndex(String indexName) {
         return null;
     }
 
-    public Observable<Map<String,Index>> queryIndex(String indexName) {
+    @Override
+    public Observable<Map<String, Index>> queryIndex(String indexName) {
         return null;
     }
 }

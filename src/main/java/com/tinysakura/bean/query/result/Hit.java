@@ -2,13 +2,15 @@ package com.tinysakura.bean.query.result;
 
 import lombok.Data;
 
+import java.util.Map;
+
 /**
  * 返回的单个文档的结果
  * @Author: chenfeihao@corp.netease.com
  * @Date: 2019/5/5
  */
 @Data
-public class Hit<T> {
+public class Hit {
     /**
      * 索引
      */
@@ -32,5 +34,7 @@ public class Hit<T> {
     /**
      * 结果文档
      */
-    T _source;
+    Map<String, Object> _source;
+
+    Map<String, Object[]> fields;
 }
