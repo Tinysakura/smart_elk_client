@@ -2,6 +2,7 @@ package com.tinysakura.core.query.base;
 
 import com.tinysakura.bean.query.Query;
 import com.tinysakura.bean.query.entry.RangeEntry;
+import com.tinysakura.exception.NotAppointFieldsException;
 import lombok.Data;
 
 import java.util.HashMap;
@@ -81,6 +82,10 @@ public class RangeQuery {
         }
 
         public RangeQuery build() {
+            if (fieldName == null) {
+                throw new NotAppointFieldsException();
+            }
+
             RangeQuery rangeQuery = new RangeQuery();
             Query query = new Query();
             rangeEntryMap.put(fieldName, rangeEntry);

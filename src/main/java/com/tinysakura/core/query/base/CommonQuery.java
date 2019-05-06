@@ -2,6 +2,7 @@ package com.tinysakura.core.query.base;
 
 import com.tinysakura.bean.query.Query;
 import com.tinysakura.bean.query.entry.CommonEntry;
+import com.tinysakura.exception.NotAppointFieldsException;
 import lombok.Data;
 
 import java.util.HashMap;
@@ -115,8 +116,12 @@ public class CommonQuery {
         }
 
         public CommonQuery build() {
+            if (fieldName == null) {
+                throw new NotAppointFieldsException();
+            }
+
             CommonQuery commonQuery = new CommonQuery();
-            Map<String, CommonEntry> map = new HashMap<>();
+            Map<String, CommonEntry> map = new HashMap<>(1);
             map.put(fieldName, commonEntry);
             query.setCommon(map);
             commonQuery.setQuery(query);

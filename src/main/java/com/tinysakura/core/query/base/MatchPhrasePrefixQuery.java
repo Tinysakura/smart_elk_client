@@ -2,6 +2,7 @@ package com.tinysakura.core.query.base;
 
 import com.tinysakura.bean.query.Query;
 import com.tinysakura.bean.query.entry.MatchPhrasePrefixEntry;
+import com.tinysakura.exception.NotAppointFieldsException;
 import lombok.Data;
 
 import java.util.HashMap;
@@ -62,6 +63,10 @@ public class MatchPhrasePrefixQuery {
         }
 
         public MatchPhrasePrefixQuery build() {
+            if (fieldName == null) {
+                throw new NotAppointFieldsException();
+            }
+
             MatchPhrasePrefixQuery matchPhrasePrefixQuery = new MatchPhrasePrefixQuery();
             Query query = new Query();
             matchPhrasePrefixEntryMap.put(fieldName, matchPhrasePrefixEntry);

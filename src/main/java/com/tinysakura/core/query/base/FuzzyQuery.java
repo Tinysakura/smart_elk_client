@@ -2,6 +2,7 @@ package com.tinysakura.core.query.base;
 
 import com.tinysakura.bean.query.Query;
 import com.tinysakura.bean.query.entry.FuzzyEntry;
+import com.tinysakura.exception.NotAppointFieldsException;
 import lombok.Data;
 
 import java.util.HashMap;
@@ -57,6 +58,10 @@ public class FuzzyQuery {
         }
 
         public FuzzyQuery build() {
+            if (fieldName == null) {
+                throw new NotAppointFieldsException();
+            }
+
             FuzzyQuery fuzzyQuery = new FuzzyQuery();
             Query query = new Query();
             fuzzyEntryMap.put(fieldName, fuzzyEntry);

@@ -2,6 +2,7 @@ package com.tinysakura.core.query.base;
 
 import com.tinysakura.bean.query.Query;
 import com.tinysakura.bean.query.entry.PrefixEntry;
+import com.tinysakura.exception.NotAppointFieldsException;
 import lombok.Data;
 
 import java.util.HashMap;
@@ -19,7 +20,7 @@ public class PrefixQuery {
     public static final class Builder{
         private Map<String, PrefixEntry> prefixEntryMap;
         private PrefixEntry prefixEntry;
-        private String fieldsName;
+        private String fieldName;
 
         public Builder() {
             this.prefixEntryMap = new HashMap<>(1);
@@ -27,7 +28,7 @@ public class PrefixQuery {
         }
 
         public Builder fields(String fieldsName) {
-            this.fieldsName = fieldsName;
+            this.fieldName = fieldsName;
 
             return this;
         }
@@ -45,9 +46,13 @@ public class PrefixQuery {
         }
 
         public PrefixQuery build() {
+            if (fieldName == null) {
+                throw new NotAppointFieldsException();
+            }
+
             PrefixQuery prefixQuery = new PrefixQuery();
             Query query = new Query();
-            prefixEntryMap.put(fieldsName, prefixEntry);
+            prefixEntryMap.put(fieldName, prefixEntry);
             query.setPrefix(prefixEntryMap);
             prefixQuery.setQuery(query);
 

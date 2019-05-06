@@ -2,6 +2,7 @@ package com.tinysakura.core.query.base;
 
 import com.tinysakura.bean.query.Query;
 import com.tinysakura.bean.query.entry.MatchEntry;
+import com.tinysakura.exception.NotAppointFieldsException;
 import lombok.Data;
 
 import java.util.HashMap;
@@ -75,6 +76,10 @@ public class MatchQuery {
         }
 
         public MatchQuery build() {
+            if (fieldName == null) {
+                throw new NotAppointFieldsException();
+            }
+
             Query query = new Query();
             matchQueryMap.put(fieldName, matchEntry);
             query.setMatch(matchQueryMap);

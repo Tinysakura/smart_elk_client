@@ -2,6 +2,7 @@ package com.tinysakura.core.query.base;
 
 import com.tinysakura.bean.query.Query;
 import com.tinysakura.bean.query.entry.RegexpEntry;
+import com.tinysakura.exception.NotAppointFieldsException;
 import lombok.Data;
 
 import java.util.HashMap;
@@ -45,6 +46,10 @@ public class RegexpQuery {
         }
 
         public RegexpQuery build() {
+            if (fieldName == null) {
+                throw new NotAppointFieldsException();
+            }
+
             RegexpQuery regexpQuery = new RegexpQuery();
             Query query = new Query();
             regexpEntryMap.put(fieldName, regexpEntry);

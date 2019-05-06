@@ -2,6 +2,7 @@ package com.tinysakura.core.query.base;
 
 import com.tinysakura.bean.query.Query;
 import com.tinysakura.bean.query.entry.WildCardEntry;
+import com.tinysakura.exception.NotAppointFieldsException;
 import lombok.Data;
 
 import java.util.HashMap;
@@ -45,6 +46,10 @@ public class WildcardQuery {
         }
 
         public WildcardQuery build() {
+            if (fieldName == null) {
+                throw new NotAppointFieldsException();
+            }
+
             WildcardQuery wildcardQuery = new WildcardQuery();
             Query query = new Query();
             wildcardQueryMap.put(fieldName, wildCardEntry);
