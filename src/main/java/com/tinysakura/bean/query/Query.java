@@ -66,4 +66,9 @@ public class Query {
      * 前缀查询
      */
     Map<String, PrefixEntry> prefix;
+
+    /**
+     * fuzzy_like_this查询
+     */
+    FuzzyLikeEntry fuzzy_like_this;
 }
