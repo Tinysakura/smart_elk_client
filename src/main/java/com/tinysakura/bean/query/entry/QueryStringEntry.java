@@ -14,6 +14,11 @@ public class QueryStringEntry {
     String query;
 
     /**
+     * 多字段query_string查询 默认使用布尔查询构造
+     */
+    String[] fields;
+
+    /**
      * 默认查询字段（由index.query.default.field指定）
      */
     String default_field;
@@ -59,4 +64,9 @@ public class QueryStringEntry {
      * 此参数控制有多少生成的Boolean should子句与文档匹配才返回结果，可以是[0 - 1]的百分比也可以是具体数量
      */
     Double minimum_should_match;
+
+    /**
+     * 使用最大分查询替换布尔查询
+     */
+    Boolean use_dis_max;
 }

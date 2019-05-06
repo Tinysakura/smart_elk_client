@@ -86,6 +86,18 @@ public class LuceneQuery {
             return this;
         }
 
+        public Builder useDisMac(Boolean bool) {
+            this.queryStringEntry.setUse_dis_max(bool);
+
+            return this;
+        }
+
+        public Builder fields(String[] fields) {
+            this.queryStringEntry.setFields(fields);
+
+            return this;
+        }
+
         public LuceneQuery build() {
             LuceneQuery luceneQuery = new LuceneQuery();
             Query query = new Query();
