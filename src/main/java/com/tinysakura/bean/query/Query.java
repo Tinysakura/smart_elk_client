@@ -61,4 +61,9 @@ public class Query {
      * 标识符查询
      */
     DocumentIdsEntry ids;
+
+    /**
+     * 前缀查询
+     */
+    Map<String, PrefixEntry> prefix;
 }
