@@ -86,4 +86,9 @@ public class Query {
      * more_like_this查询
      */
     MoreKLikeEntry more_like_this;
+
+    /**
+     * 范围查询
+     */
+    Map<String, RangeEntry> range;
 }
