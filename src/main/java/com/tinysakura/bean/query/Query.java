@@ -39,5 +39,13 @@ public class Query {
      */
     Map<String, MatchPhraseEntry> match_phrase;
 
+    /**
+     * matchPhrasePrefix查询
+     */
     Map<String, MatchPhrasePrefixEntry> match_phrase_prefix;
+
+    /**
+     * 多字段match查询
+     */
+    MultiMatchEntry multi_match;
 }
