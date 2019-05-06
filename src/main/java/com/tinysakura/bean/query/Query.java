@@ -91,4 +91,9 @@ public class Query {
      * 范围查询
      */
     Map<String, RangeEntry> range;
+
+    /**
+     * 正则表达式查询
+     */
+    Map<String, RegexpEntry> regexp;
 }
