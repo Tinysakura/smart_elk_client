@@ -1,4 +1,4 @@
-package com.tinysakura.bean.query.extra;
+package com.tinysakura.bean.query.entry;
 
 import lombok.Data;
 

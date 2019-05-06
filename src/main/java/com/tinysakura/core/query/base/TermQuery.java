@@ -1,7 +1,7 @@
 package com.tinysakura.core.query.base;
 
 import com.tinysakura.bean.query.Query;
-import com.tinysakura.bean.query.extra.WordEntry;
+import com.tinysakura.bean.query.entry.WordEntry;
 import lombok.Data;
 
 import java.util.HashMap;

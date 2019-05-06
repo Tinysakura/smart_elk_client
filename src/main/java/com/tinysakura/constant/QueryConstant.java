@@ -74,4 +74,10 @@ public class QueryConstant {
         private static final String OR = "or";
     }
 
+    public class SearchBehavior {
+        private static final String NONE = "none";
+
+        private static final String ALL = "all";
+    }
+
 }

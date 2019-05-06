@@ -1,7 +1,6 @@
 package com.tinysakura.bean.query;
 
-import com.tinysakura.bean.query.extra.CommonEntry;
-import com.tinysakura.bean.query.extra.WordEntry;
+import com.tinysakura.bean.query.entry.*;
 import lombok.Data;
 
 import java.util.Map;
@@ -25,5 +24,20 @@ public class Query {
      */
     Map<String, Object> terms;
 
+    /**
+     * 常用词查询
+     */
     Map<String, CommonEntry> common;
+
+    /**
+     * match查询
+     */
+    Map<String, MatchEntry> match;
+
+    /**
+     * matchPhrase查询
+     */
+    Map<String, MatchPhraseEntry> match_phrase;
+
+    Map<String, MatchPhrasePrefixEntry> match_phrase_prefix;
 }
