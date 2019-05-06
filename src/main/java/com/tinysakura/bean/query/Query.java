@@ -14,6 +14,8 @@ import java.util.Map;
 public class Query {
     QueryStringEntry query_string;
 
+    QueryStringEntry simple_query_string;
+
     /**
      * 词条查询
      */

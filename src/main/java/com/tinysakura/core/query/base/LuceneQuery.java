@@ -16,12 +16,24 @@ public class LuceneQuery {
     public static final class Builder{
         private QueryStringEntry queryStringEntry;
 
+        /**
+         * 是否启用simple_query_string
+         * 同样接受lucene语法但会丢弃无效的部分，因此不会抛出异常
+         */
+        private boolean simpleEnabled;
+
         public Builder() {
             this.queryStringEntry = new QueryStringEntry();
         }
 
         public Builder query(String query) {
             this.queryStringEntry.setQuery(query);
+
+            return this;
+        }
+
+        public Builder simple(Boolean simpleEnabled) {
+            this.simpleEnabled = simpleEnabled;
 
             return this;
         }
@@ -101,7 +113,11 @@ public class LuceneQuery {
         public LuceneQuery build() {
             LuceneQuery luceneQuery = new LuceneQuery();
             Query query = new Query();
-            query.setQuery_string(queryStringEntry);
+            if (simpleEnabled) {
+                query.setSimple_query_string(queryStringEntry);
+            } else {
+                query.setQuery_string(queryStringEntry);
+            }
             luceneQuery.setQuery(query);
 
             return luceneQuery;
