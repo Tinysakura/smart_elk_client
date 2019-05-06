@@ -76,4 +76,9 @@ public class Query {
      * fuzzy查询
      */
     Map<String, FuzzyEntry> fuzzy;
+
+    /**
+     * 通配符查询
+     */
+    Map<String, WildCardEntry> wildcard;
 }
