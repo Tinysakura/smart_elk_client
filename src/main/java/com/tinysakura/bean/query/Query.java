@@ -81,4 +81,9 @@ public class Query {
      * 通配符查询
      */
     Map<String, WildCardEntry> wildcard;
+
+    /**
+     * more_like_this查询
+     */
+    MoreKLikeEntry more_like_this;
 }
