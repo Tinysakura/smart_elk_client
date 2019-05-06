@@ -16,7 +16,7 @@ public class QueryBodyTest {
         QueryBody.Builder builder = new QueryBody.Builder();
 
         QueryBody queryBody = builder.fields("author").fields("title").from(1).size(10).minScore(0.75f)
-                .version(true).include("partial1", new String[]{"titl*"}).exclude("partial1", new String[]{"char*"}).luceneQuery("title:Love Story")
+                .version(true).include("partial1", new String[]{"titl*"}).exclude("partial1", new String[]{"char*"})
                 .build();
 
         System.out.println(JSON.toJSONString(queryBody.getQueryBody()));

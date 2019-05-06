@@ -80,6 +80,12 @@ public class QueryConstant {
         public static final String SHOULD = "should";
     }
 
+    public class Boosting{
+        public static final String POSITIVE = "positive";
+
+        public static final String NEGATIVE = "negative";
+    }
+
     public class SearchBehavior {
         public static final String NONE = "none";
 

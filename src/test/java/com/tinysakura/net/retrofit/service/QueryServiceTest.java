@@ -24,7 +24,7 @@ public class QueryServiceTest {
         QueryBody.Builder builder = new QueryBody.Builder();
 
         final QueryBody queryBody = builder.fields("author").fields("title").from(0).size(10)
-                .version(true).luceneQuery("title:Love Story").searchType(QueryConstant.SearchType.QUERY_AND_FETCH)
+                .version(true).searchType(QueryConstant.SearchType.QUERY_AND_FETCH)
                 .build();
 
         Gson gson = new Gson();

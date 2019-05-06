@@ -2,6 +2,7 @@ package com.tinysakura.bean.query;
 
 import com.tinysakura.bean.query.entry.*;
 import com.tinysakura.bean.query.entry.composite.BoolEntry;
+import com.tinysakura.bean.query.entry.composite.BoostingEntry;
 import lombok.Data;
 
 import java.util.Map;
@@ -102,4 +103,9 @@ public class Query {
      * 布尔查询
      */
     Map<String, BoolEntry> bool;
+
+    /**
+     * 加权查询
+     */
+    Map<String, Object> boosting;
 }
