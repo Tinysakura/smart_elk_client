@@ -12,8 +12,14 @@ import java.util.Map;
  */
 @Data
 public class Query {
+    /**
+     * queryString查询
+     */
     QueryStringEntry query_string;
 
+    /**
+     * simpleQueryString查询
+     */
     QueryStringEntry simple_query_string;
 
     /**
@@ -50,4 +56,9 @@ public class Query {
      * 多字段match查询
      */
     MultiMatchEntry multi_match;
+
+    /**
+     * 标识符查询
+     */
+    DocumentIdsEntry ids;
 }
