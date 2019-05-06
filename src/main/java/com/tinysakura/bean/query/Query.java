@@ -1,6 +1,7 @@
 package com.tinysakura.bean.query;
 
 import com.tinysakura.bean.query.entry.*;
+import com.tinysakura.bean.query.entry.composite.BoolEntry;
 import lombok.Data;
 
 import java.util.Map;
@@ -96,4 +97,9 @@ public class Query {
      * 正则表达式查询
      */
     Map<String, RegexpEntry> regexp;
+
+    /**
+     * 布尔查询
+     */
+    Map<String, BoolEntry> bool;
 }

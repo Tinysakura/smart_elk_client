@@ -213,20 +213,6 @@ public class QueryBody {
         }
 
         /**
-         * 使用lucene查询语法指定查询条件
-         * @param query
-         * @return
-         */
-        public Builder luceneQuery(String query) {
-            this.queryBody.setQuery(new Query());
-            QueryStringEntry queryString = new QueryStringEntry();
-            queryString.setQuery(query);
-            this.queryBody.getQuery().setQuery_string(queryString);
-
-            return this;
-        }
-
-        /**
          * 指定查询体进行查询(包含基本查询与复合查询)
          * @param query
          * @return

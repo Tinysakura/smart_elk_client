@@ -69,15 +69,21 @@ public class QueryConstant {
     }
 
     public class Bool {
-        private static final String AND = "and";
+        public static final String AND = "and";
 
-        private static final String OR = "or";
+        public static final String OR = "or";
+
+        public static final String MUST = "must";
+
+        public static final String MUST_NOT = "must_not";
+
+        public static final String SHOULD = "should";
     }
 
     public class SearchBehavior {
-        private static final String NONE = "none";
+        public static final String NONE = "none";
 
-        private static final String ALL = "all";
+        public static final String ALL = "all";
     }
 
 }
