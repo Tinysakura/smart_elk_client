@@ -12,7 +12,7 @@ import java.util.Map;
  */
 @Data
 public class Query {
-    QueryString query_string;
+    QueryStringEntry query_string;
 
     /**
      * 词条查询

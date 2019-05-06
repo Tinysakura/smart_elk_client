@@ -2,7 +2,7 @@ package com.tinysakura.core.query;
 
 import com.tinysakura.bean.query.Partial;
 import com.tinysakura.bean.query.Query;
-import com.tinysakura.bean.query.QueryString;
+import com.tinysakura.bean.query.entry.QueryStringEntry;
 import com.tinysakura.constant.QueryConstant;
 import com.tinysakura.util.StringUtil;
 import lombok.Data;
@@ -219,7 +219,7 @@ public class QueryBody {
          */
         public Builder luceneQuery(String query) {
             this.queryBody.setQuery(new Query());
-            QueryString queryString = new QueryString();
+            QueryStringEntry queryString = new QueryStringEntry();
             queryString.setQuery(query);
             this.queryBody.getQuery().setQuery_string(queryString);
 
