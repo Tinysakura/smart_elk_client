@@ -55,19 +55,25 @@ public class FuzzyLikeQuery {
             return this;
         }
 
+        public Builder prefixLength(Integer length) {
+            this.fuzzyLikeEntry.setPrefix_length(length);
+
+            return this;
+        }
+
         public Builder analyzer(String analyzer) {
             this.fuzzyLikeEntry.setAnalyzer(analyzer);
 
             return this;
         }
 
-        public FuzzyLikeEntry build() {
+        public FuzzyLikeQuery build() {
             FuzzyLikeQuery fuzzyLikeQuery = new FuzzyLikeQuery();
             Query query = new Query();
             query.setFuzzy_like_this(fuzzyLikeEntry);
             fuzzyLikeQuery.setQuery(query);
 
-            return fuzzyLikeEntry;
+            return fuzzyLikeQuery;
         }
     }
 }

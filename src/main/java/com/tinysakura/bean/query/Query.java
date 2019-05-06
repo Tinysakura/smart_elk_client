@@ -71,4 +71,9 @@ public class Query {
      * fuzzy_like_this查询
      */
     FuzzyLikeEntry fuzzy_like_this;
+
+    /**
+     * fuzzy查询
+     */
+    Map<String, FuzzyEntry> fuzzy;
 }
