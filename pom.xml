@@ -6,7 +6,7 @@
 
   <groupId>com.tinysakura</groupId>
   <artifactId>smart_elk_client</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0-RELEASE</version>
 
   <name>smart_elk_client</name>
   <!-- FIXME change it to the project's website -->
