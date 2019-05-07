@@ -135,6 +135,15 @@ public class MultiNodeInvocationHandler<T> implements InvocationHandler {
                 List<Object> resultList = new ArrayList<Object>();
 
                 /**
+                 * 查询结果为空的情况
+                 */
+                if (hits.getHits() == null || hits.getHits().length == 0) {
+                    queryResponse.setResults(resultList);
+
+                    return Observable.just(queryResponse);
+                }
+
+                /**
                  * hits节点下_source字段不为空的情况（查询时指定了返回的fields时该字段会为空）
                  */
                 if (hits.getHits()[0].get_source() != null) {
@@ -207,7 +216,6 @@ public class MultiNodeInvocationHandler<T> implements InvocationHandler {
 
                 return Observable.just(queryResponse);
             }
-
 
             return Observable.just(result[0]);
         } else {

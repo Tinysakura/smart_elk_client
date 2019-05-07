@@ -240,19 +240,8 @@ public class QueryBody {
          * @param sort
          * @return
          */
-        public Builder fieldSort(Map<String, SortEntry>[] sort) {
-            this.queryBody.setFieldSort(sort);
-
-            return this;
-        }
-
-        /**
-         * 指定排序规则（按脚本）
-         * @param sort
-         * @return
-         */
-        public Builder scriptSort(SortEntry sort) {
-            this.queryBody.setScriptSort(sort);
+        public Builder sort(Object sort) {
+            this.queryBody.setSort(sort);
 
             return this;
         }

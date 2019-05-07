@@ -1,8 +1,6 @@
 package com.tinysakura.bean.query;
 
-import com.google.gson.annotations.SerializedName;
 import com.tinysakura.bean.query.entry.filter.FilterEntry;
-import com.tinysakura.bean.query.entry.sort.SortEntry;
 import lombok.Data;
 
 import java.util.Map;
@@ -29,11 +27,7 @@ public class QueryBody {
      * 字段排序：Map<String, SortEntry>[]
      * 脚本排序：SortEntry
      */
-    @SerializedName("sort")
-    Map<String, SortEntry>[] fieldSort;
-
-    @SerializedName("sort")
-    SortEntry scriptSort;
+    Object sort;
 
     /**
      * 指定在结果返回的起始文档

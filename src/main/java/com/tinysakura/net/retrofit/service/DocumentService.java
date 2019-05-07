@@ -34,7 +34,7 @@ public interface DocumentService {
      * @param document     文档对象
      * @return
      */
-    @POST("/{index}/{documentType}/{documentId}/")
+    @POST("/{index}/{documentType}/")
     Observable<Acknowledged> postDocument(@Path("index") String index, @Path("documentType") String documentType, @Body Object document);
 
     /**
@@ -64,6 +64,6 @@ public interface DocumentService {
      * @param routing
      * @return
      */
-    @POST("/{index}/{documentType}/{documentId}/")
+    @POST("/{index}/{documentType}/")
     Observable<Acknowledged> postDocument(@Path("index") String index, @Path("documentType") String documentType, @Body Object document, @Query("routing") String routing);
 }
