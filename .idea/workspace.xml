@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/smart_elk_client$QueryServiceTest_queryServiceTest.ic" NAME="QueryServiceTest.queryServiceTest Coverage Results" MODIFIED="1557042154493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.tinysakura.net.retrofit.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/smart_elk_client$SortQueryTest_sortQueryTest.ic" NAME="SortQueryTest.sortQueryTest Coverage Results" MODIFIED="1557214136672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.tinysakura.core.query.sort.*</FILTER>
+    </SUITE>
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
