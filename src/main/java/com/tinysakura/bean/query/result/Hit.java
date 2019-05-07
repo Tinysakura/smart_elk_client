@@ -37,4 +37,9 @@ public class Hit {
     Map<String, Object> _source;
 
     Map<String, Object[]> fields;
+
+    /**
+     * 高亮部分
+     */
+    Map<String, String[]> highlight;
 }
