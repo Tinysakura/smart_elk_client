@@ -2,7 +2,7 @@ package com.tinysakura.core.query;
 
 import com.tinysakura.bean.query.Partial;
 import com.tinysakura.bean.query.Query;
-import com.tinysakura.bean.query.entry.QueryStringEntry;
+import com.tinysakura.bean.query.entry.filter.FilterEntry;
 import com.tinysakura.constant.QueryConstant;
 import com.tinysakura.util.StringUtil;
 import lombok.Data;
@@ -219,6 +219,17 @@ public class QueryBody {
          */
         public Builder query(Query query) {
             this.queryBody.setQuery(query);
+
+            return this;
+        }
+
+        /**
+         * 指定查询过滤器
+         * @param filterEntry
+         * @return
+         */
+        public Builder filter(FilterEntry filterEntry) {
+            this.queryBody.setPost_filter(filterEntry);
 
             return this;
         }

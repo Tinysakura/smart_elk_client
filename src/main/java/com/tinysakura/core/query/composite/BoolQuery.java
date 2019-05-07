@@ -1,7 +1,7 @@
-package com.tinysakura.core.query.base;
+package com.tinysakura.core.query.composite;
 
 import com.tinysakura.bean.query.Query;
-import com.tinysakura.bean.query.entry.composite.BoostingEntry;
+import com.tinysakura.bean.query.entry.composite.BoolEntry;
 import com.tinysakura.bean.query.entry.composite.RangeEntry;
 import com.tinysakura.constant.QueryConstant;
 import com.tinysakura.exception.NotAppointFieldsException;
@@ -11,34 +11,39 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 加权查询，包含两个查询和一个权值，positive节点查询返回的文档得分不变，negative节点查询得到的文档的得分会被乘以权值
+ * 布尔查询
+ * 用法 ： new BoolQuery.Builder().must().field(xxx).value(xxx).
+ *          .should().field(xxx).range(xxx, xxx).build;
  * @Author: chenfeihao@corp.netease.com
  * @Date: 2019/5/6
  */
 @Data
-public class BoostingQuery {
+public class BoolQuery {
     private Query query;
 
     public static final class Builder{
-        private Map<String, Object> boostingEntryMap;
-        /**
-         * 倾向{@link com.tinysakura.constant.QueryConstant.Boosting}
-         */
-        private String tendency;
+        private Map<String, BoolEntry> boolQueryMap;
         private String fieldName;
+        private String bool;
 
         public Builder() {
-            this.boostingEntryMap = new HashMap<>(3);
+            this.boolQueryMap = new HashMap<>(16);
         }
 
-        public Builder positive() {
-            this.tendency = QueryConstant.Boosting.POSITIVE;
+        public Builder must() {
+            this.bool = QueryConstant.Bool.MUST;
 
             return this;
         }
 
-        public Builder negative() {
-            this.tendency = QueryConstant.Boosting.NEGATIVE;
+        public Builder mustNot() {
+            this.bool = QueryConstant.Bool.MUST_NOT;
+
+            return this;
+        }
+
+        public Builder should() {
+            this.bool = QueryConstant.Bool.SHOULD;
 
             return this;
         }
@@ -54,12 +59,12 @@ public class BoostingQuery {
                 throw new NotAppointFieldsException();
             }
 
-            BoostingEntry boostingEntry = new BoostingEntry();
+            BoolEntry boolEntry = new BoolEntry();
             Map<String, Object> term = new HashMap<>(1);
             term.put(fieldName, value);
-            boostingEntry.setTerm(term);
+            boolEntry.setTerm(term);
 
-            boostingEntryMap.put(tendency, boostingEntry);
+            boolQueryMap.put(bool, boolEntry);
 
             return this;
         }
@@ -69,32 +74,26 @@ public class BoostingQuery {
                 throw new NotAppointFieldsException();
             }
 
-            BoostingEntry boostingEntry = new BoostingEntry();
+            BoolEntry boolEntry = new BoolEntry();
             Map<String, RangeEntry> range = new HashMap<>(1);
             RangeEntry rangeEntry = new RangeEntry();
             rangeEntry.setFrom(from);
             rangeEntry.setTo(to);
             range.put(fieldName, rangeEntry);
-            boostingEntry.setRange(range);
+            boolEntry.setRange(range);
 
-            boostingEntryMap.put(tendency, boostingEntry);
-
-            return this;
-        }
-
-        public Builder negativeBoost(Double boost) {
-            boostingEntryMap.put("negative_boost",boost);
+            boolQueryMap.put(bool, boolEntry);
 
             return this;
         }
 
-        public BoostingQuery build() {
-            BoostingQuery boostingQuery = new BoostingQuery();
+        public BoolQuery build() {
+            BoolQuery boolQuery = new BoolQuery();
             Query query = new Query();
-            query.setBoosting(boostingEntryMap);
-            boostingQuery.setQuery(query);
+            query.setBool(boolQueryMap);
+            boolQuery.setQuery(query);
 
-            return boostingQuery;
+            return boolQuery;
         }
     }
 }

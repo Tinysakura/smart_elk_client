@@ -1,6 +1,7 @@
 package com.tinysakura.core.query.base;
 
 import com.google.gson.Gson;
+import com.tinysakura.core.query.composite.BoostingQuery;
 import org.junit.Test;
 
 /**

@@ -1,5 +1,6 @@
 package com.tinysakura.bean.query;
 
+import com.tinysakura.bean.query.entry.filter.FilterEntry;
 import lombok.Data;
 
 import java.util.Map;
@@ -15,6 +16,11 @@ public class QueryBody {
      * 查询条件
      */
     Query query;
+
+    /**
+     * 过滤器
+     */
+    FilterEntry post_filter;
 
     /**
      * 指定在结果返回的起始文档
