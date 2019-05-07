@@ -92,4 +92,30 @@ public class QueryConstant {
         public static final String ALL = "all";
     }
 
+    public class Order{
+        /**
+         * 升序排列
+         */
+        public static final String ASC = "asc";
+
+        /**
+         * 降序排列
+         */
+        public static final String DESC = "desc";
+    }
+
+    /**
+     * 文档缺少指定字段或指定字段值为空的行为常量
+     */
+    public class FieldMissingBehavior {
+        /**
+         * 缺乏指定字段的文档将被排列在结果列表底部
+         */
+        public static final String LAST = "_last";
+
+        /**
+         * 缺乏指定字段的文档将被排列在结果列表顶部
+         */
+        public static final String FIRST = "_first";
+    }
 }

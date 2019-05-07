@@ -3,6 +3,7 @@ package com.tinysakura.core.query;
 import com.tinysakura.bean.query.Partial;
 import com.tinysakura.bean.query.Query;
 import com.tinysakura.bean.query.entry.filter.FilterEntry;
+import com.tinysakura.bean.query.entry.sort.SortEntry;
 import com.tinysakura.constant.QueryConstant;
 import com.tinysakura.util.StringUtil;
 import lombok.Data;
@@ -230,6 +231,28 @@ public class QueryBody {
          */
         public Builder filter(FilterEntry filterEntry) {
             this.queryBody.setPost_filter(filterEntry);
+
+            return this;
+        }
+
+        /**
+         * 指定排序规则（按字段）
+         * @param sort
+         * @return
+         */
+        public Builder fieldSort(Map<String, SortEntry>[] sort) {
+            this.queryBody.setFieldSort(sort);
+
+            return this;
+        }
+
+        /**
+         * 指定排序规则（按脚本）
+         * @param sort
+         * @return
+         */
+        public Builder scriptSort(SortEntry sort) {
+            this.queryBody.setScriptSort(sort);
 
             return this;
         }
