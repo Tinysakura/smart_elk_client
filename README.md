@@ -23,6 +23,7 @@ mvn clean install -Dmaven.test.skip=true
 
 ### usage
 **1.配置elk节点**
+
 如果你是spring-boot或其他spring项目，在resource path下的application.properties或application.yml文件中配置elk.node.ip属性（推荐将主节点或可用性较高的节点放在首位，节点地址由,分隔）：
 ```
 elk.node.ip = http://192.168.1.1:9200,http://127.0.0.1:9200
@@ -30,6 +31,7 @@ elk.node.ip = http://192.168.1.1:9200,http://127.0.0.1:9200
 如果是普通java项目，则需要在resource path下手动创建application.properties文件。
 
 **2.创建索引**
+
 ```java
  	@Test
     public void createIndexTest() {
@@ -59,6 +61,7 @@ elk.node.ip = http://192.168.1.1:9200,http://127.0.0.1:9200
 
 **3 为索引添加文档**
 **3.1 单个文档的索引**
+
 ```java
     @Test
     public void addDocumentTest() {
@@ -79,6 +82,7 @@ elk.node.ip = http://192.168.1.1:9200,http://127.0.0.1:9200
 文档的照例从RetrofitProxyServiceHolder这个单例类中获取文档操作相关的DocumentService代理对象，调用postDocument方法即可。三个参数分别对应索引，文档类型与具体文档。
 
 **3.2 批量文档的索引**
+
 ```java
 	@Test
     public void batchPostDocumentTest() {
@@ -105,6 +109,7 @@ RequestBody requestBody = Bulk.fromJsonFile("fielpath");
 ```
 
 **4 查询**
+
 smart-elk-client支持几乎所有类型的查询，包括词条查询，match查询，模糊查询，标识符查询，lucene语法查询，范围查询，正则查询，通配符查询以及复合查询（布尔查询与加权查询）。支持对查询结果进行过滤与排序，高亮显示。
 下面是一个match查询的示例:
 ```java
