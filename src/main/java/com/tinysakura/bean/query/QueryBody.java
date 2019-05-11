@@ -1,6 +1,7 @@
 package com.tinysakura.bean.query;
 
 import com.tinysakura.bean.query.entry.filter.FilterEntry;
+import com.tinysakura.bean.query.entry.highlight.HighLightEntry;
 import lombok.Data;
 
 import java.util.Map;
@@ -16,6 +17,11 @@ public class QueryBody {
      * 查询条件
      */
     Query query;
+
+    /**
+     * 高亮
+     */
+    HighLightEntry highlight;
 
     /**
      * 过滤器
