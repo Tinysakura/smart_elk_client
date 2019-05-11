@@ -17,6 +17,7 @@ import com.tinysakura.net.retrofit.service.DocumentService;
 import com.tinysakura.net.retrofit.service.IndexService;
 import com.tinysakura.net.retrofit.service.QueryService;
 import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
 import org.junit.Test;
 
 /**
@@ -106,7 +107,7 @@ public class SampleTest {
 
         System.out.println(gson.toJson(queryBody.getQueryBody()));
 
-        queryService.search("book", "book", queryBody.getQueryBody(), Book.class).subscribe(new Consumer<QueryResponse>() {
+        queryService.search("book", "book", queryBody.getQueryBody(), Book.class).subscribeOn(Schedulers.io()).subscribe(new Consumer<QueryResponse>() {
             @Override
             public void accept(QueryResponse queryResponse) throws Exception {
                 System.out.println(queryResponse.getResults());

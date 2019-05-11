@@ -3,6 +3,7 @@ package com.tinysakura.core.query;
 import com.tinysakura.bean.query.Partial;
 import com.tinysakura.bean.query.Query;
 import com.tinysakura.bean.query.entry.filter.FilterEntry;
+import com.tinysakura.bean.query.entry.highlight.HighLightEntry;
 import com.tinysakura.bean.query.entry.sort.SortEntry;
 import com.tinysakura.constant.QueryConstant;
 import com.tinysakura.util.StringUtil;
@@ -242,6 +243,17 @@ public class QueryBody {
          */
         public Builder sort(Object sort) {
             this.queryBody.setSort(sort);
+
+            return this;
+        }
+
+        /**
+         * 高亮
+         * @param highLightEntry
+         * @return
+         */
+        public Builder highlight(HighLightEntry highLightEntry) {
+            this.queryBody.setHighlight(highLightEntry);
 
             return this;
         }
