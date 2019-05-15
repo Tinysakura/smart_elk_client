@@ -12,5 +12,5 @@ public class Source {
     /**
      * 是否启用_source字段
      */
-    private boolean enabled;
+    private String enabled;
 }

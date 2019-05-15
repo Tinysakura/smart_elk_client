@@ -13,7 +13,7 @@ public class TTL {
     /**
      * 是否启用_ttl字段
      */
-    private boolean enabled;
+    private String enabled;
 
     /**
      * 默认过期时间，如果需要30天后过期则 "default" : "30d"

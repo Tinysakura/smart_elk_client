@@ -13,5 +13,5 @@ public class All {
     /**
      * 是否启用_all字段
      */
-    private boolean enabled;
+    private String enabled;
 }

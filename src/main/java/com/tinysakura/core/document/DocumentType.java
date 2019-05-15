@@ -67,9 +67,11 @@ public class DocumentType {
          * @return
          */
         public Builder extraAll(boolean enabled) {
-            All all = new All();
-            all.setEnabled(enabled);
-            documentType.set_all(all);
+            if (enabled) {
+                All all = new All();
+                all.setEnabled("true");
+                documentType.set_all(all);
+            }
 
             return this;
         }
@@ -94,9 +96,11 @@ public class DocumentType {
          * @return
          */
         public Builder extraIndex(boolean enabled) {
-            Index index = new Index();
-            index.setEnabled(enabled);
-            documentType.set_index(index);
+            if (enabled) {
+                Index index = new Index();
+                index.setEnabled("true");
+                documentType.set_index(index);
+            }
 
             return this;
         }
@@ -109,7 +113,7 @@ public class DocumentType {
         public Builder extraSize(boolean enabled) {
             if (enabled) {
                 Size size = new Size();
-                size.setEnabled(enabled);
+                size.setEnabled("true");
                 size.setStore(DocumentPropertiesConstant.Store.YES);
                 documentType.set_size(size);
             }
@@ -123,9 +127,11 @@ public class DocumentType {
          * @return
          */
         public Builder extraTimestamp(boolean enabled) {
-            Timestamp timestamp = new Timestamp();
-            timestamp.setEnabled(enabled);
-            documentType.set_timestamp(timestamp);
+            if (enabled) {
+                Timestamp timestamp = new Timestamp();
+                timestamp.setEnabled("true");
+                documentType.set_timestamp(timestamp);
+            }
 
             return this;
         }
@@ -136,9 +142,11 @@ public class DocumentType {
          * @return
          */
         public Builder extraSoure(boolean enabled) {
-            Source source = new Source();
-            source.setEnabled(enabled);
-            documentType.set_source(source);
+            if (enabled) {
+                Source source = new Source();
+                source.setEnabled("true");
+                documentType.set_source(source);
+            }
 
             return this;
         }
@@ -150,7 +158,7 @@ public class DocumentType {
          */
         public Builder extraTTL(String expire) {
             TTL ttl = new TTL();
-            ttl.setEnabled(true);
+            ttl.setEnabled("true");
             ttl.setDefaults(expire);
             documentType.set_ttl(ttl);
 

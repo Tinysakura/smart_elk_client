@@ -12,5 +12,5 @@ public class Index {
     /**
      * 是否启用_index字段
      */
-    private boolean enabled;
+    private String enabled;
 }

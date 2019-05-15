@@ -12,7 +12,7 @@ public class Size {
     /**
      * 是否启用_size字段
      */
-    private boolean enabled;
+    private String enabled;
 
     /**
      * _size字段是否被存储{@link com.tinysakura.constant.DocumentPropertiesConstant.Store}

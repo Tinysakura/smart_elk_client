@@ -12,5 +12,5 @@ public class Timestamp {
     /**
      * 是否启用_timestamp字段
      */
-    private boolean enabled;
+    private String enabled;
 }
