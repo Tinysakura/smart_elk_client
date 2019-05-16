@@ -14,6 +14,7 @@ import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 import lombok.extern.slf4j.Slf4j;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -168,8 +169,13 @@ public class MultiNodeInvocationHandler<T> implements InvocationHandler {
                             String methodName = "set".concat(StringUtil.upperCaseFirst(key));
                             try {
                                 Method setMethod = methodMap.get(methodName);
-                                setMethod.invoke(o, resourceMap.get(key));
-                            } catch (IllegalAccessException | InvocationTargetException e) {
+
+                                Class<?> setParameter = setMethod.getParameterTypes()[0];
+                                Constructor<?> constructor = setParameter.getConstructor(String.class);
+                                Object setValue = constructor.newInstance(resourceMap.get(key));
+
+                                setMethod.invoke(o, setValue);
+                            } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException | InstantiationException e) {
                                 e.printStackTrace();
                             }
                         }
