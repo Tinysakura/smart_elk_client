@@ -172,7 +172,7 @@ public class MultiNodeInvocationHandler<T> implements InvocationHandler {
 
                                 Class<?> setParameter = setMethod.getParameterTypes()[0];
                                 Constructor<?> constructor = setParameter.getConstructor(String.class);
-                                Object setValue = constructor.newInstance(resourceMap.get(key).toString().split(".")[0]);
+                                Object setValue = constructor.newInstance(resourceMap.get(key).toString().split("\\.")[0]);
 
                                 setMethod.invoke(o, setValue);
                             } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException | InstantiationException e) {
