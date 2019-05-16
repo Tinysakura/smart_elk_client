@@ -51,10 +51,12 @@ public class MultiNodeInvocationHandler<T> implements InvocationHandler {
              * 针对QueryService做特殊处理
              */
             try {
-                clazz = (Class) args[args.length - 1];
-                args = ArrayUtil.removeAppointType(Class.class, args);
+                if (args[args.length - 1] instanceof Class) {
+                    clazz = (Class) args[args.length - 1];
+                    args = ArrayUtil.removeAppointType(Class.class, args);
 
-                method = method.getDeclaringClass().getMethod(method.getName(), ArrayUtil.convert2ClassArray(args));
+                    method = method.getDeclaringClass().getMethod(method.getName(), ArrayUtil.convert2ClassArray(args));
+                }
             } catch (NoSuchMethodException e) {
                 e.printStackTrace();
             }
