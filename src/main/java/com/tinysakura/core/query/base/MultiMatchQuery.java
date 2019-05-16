@@ -70,6 +70,7 @@ public class MultiMatchQuery {
         public  MultiMatchQuery build() {
             MultiMatchQuery multiMatchQuery = new MultiMatchQuery();
             Query query = new Query();
+            multiMatchEntry.setFields(fields);
             query.setMulti_match(multiMatchEntry);
             multiMatchQuery.setQuery(query);
 
