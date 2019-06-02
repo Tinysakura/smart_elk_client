@@ -2,3 +2,5 @@
 /.idea/
 /target/
 /smart_elk_client.iml
+/.gitignore/
+/.DS_Store/
