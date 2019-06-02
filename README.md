@@ -33,7 +33,7 @@ elk.node.ip = http://192.168.1.1:9200,http://127.0.0.1:9200
 **2.创建索引**
 
 ```java
- 	@Test
+    @Test
     public void createIndexTest() {
         IndexService indexService = RetrofitProxyServiceHolder.getInstance().getIndexServiceProxy();
 
@@ -84,7 +84,7 @@ elk.node.ip = http://192.168.1.1:9200,http://127.0.0.1:9200
 **3.2 批量文档的索引**
 
 ```java
-	@Test
+    @Test
     public void batchPostDocumentTest() {
         BulkItem bulkItem1 = new BulkItem.Builder().operation(BulkOperationConstants.Operation.CREATE).document(new Music("Taylor swift", "Style"))
                 .documentId("3").index("media").type(BulkOperationConstants.Type.CONCAT).build();
@@ -113,7 +113,7 @@ RequestBody requestBody = Bulk.fromJsonFile("fielpath");
 smart-elk-client支持几乎所有类型的查询，包括词条查询，match查询，模糊查询，标识符查询，lucene语法查询，范围查询，正则查询，通配符查询以及复合查询（布尔查询与加权查询）。支持对查询结果进行过滤与排序，高亮显示。
 下面是一个match查询的示例:
 ```java
-	@Test
+    @Test
     public void matchQueryTest() {
         QueryService queryService = RetrofitProxyServiceHolder.getInstance().getQueryServiceProxy();
 
