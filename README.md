@@ -60,6 +60,7 @@ elk.node.ip = http://192.168.1.1:9200,http://127.0.0.1:9200
 首先从RetrofitProxyServiceHolder这个单例类中获取索引操作相关的IndexService代理对象，之后使用构造器类自定义分析器、映射配置、索引配置，最后使用indexService的createIndex方法创建索引。构造器的设计遵循elk的rest api，所有构造器类都位于项目的com.tinysakura.core包下，使用者可以参考源码和elk的rest api进行使用。
 
 **3 为索引添加文档**
+
 **3.1 单个文档的索引**
 
 ```java
